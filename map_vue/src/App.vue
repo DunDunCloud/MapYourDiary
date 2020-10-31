@@ -52,9 +52,6 @@ export default {
     // this method calls the AuthService login() method
     login () {
       auth.login()
-      // if (this.$route.path !== '/') {
-      //   this.$router.push('/')
-      // }
     },
     handleAuthentication () {
       auth.handleAuthentication()
