@@ -1,8 +1,8 @@
 <template>
   <v-container style="margin: 0px; padding: 0px">
   <GmapMap
-   :center="{lat:10, lng:10}"
-   :zoom="7"
+   :center="{lat:37.5095711, lng:127.0533331}"
+   :zoom="15"
    map-type-id="terrain"
    style="width: 99.5vw; height: 100vh"
   >
