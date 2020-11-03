@@ -369,3 +369,25 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 - DB: MongoDB
 
 - 개발 언어: Python HTML5 CSS3 Vue.js
+
+
+# 회의록 2
+
+## 역할 분담
+
+- 찬진: DB(MongoDB 구축)  → EC2 인스턴스에 MongoDB 구축
+- 륜화: 구글 지도 마커 구현
+- 진실: read.me 회의록 추가, 카카오오븐 ui 설계
+- 찬영: 지도 띄우기
+
+
+# 회의록 3
+
+## 역할 분담
+- 찬진: EC2 인스턴스에 MongoDB 재 구축(버지니아) 및 연동
+- 륜화: 카카오오븐 ui 설계
+- 진실: navbar 기능 구현, 카카오오븐 ui 설계
+- 찬영: 지도 크기 조절, Auth0
+
+### 완료된 항목
+- ui 설계
