@@ -2,15 +2,17 @@
   <v-app style="margin: 0px">
     <sidebar-menu :menu="menu" />
     <v-content>
-      <HelloWorld/>
+      <v-container id="container">
+        <HelloWorld/>
+      </v-container>
     </v-content>
-    <ListView/>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
 import { SidebarMenu } from 'vue-sidebar-menu'
+
 
 export default {
   name: 'App',
