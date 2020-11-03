@@ -1,52 +1,33 @@
 <template>
-  <v-app style="margin: 0px">
-    <sidebar-menu :menu="menu" />
-    <v-content>
-      <v-container id="container">
-        <HelloWorld/>
-      </v-container>
-    </v-content>
-  </v-app>
+  <div id="app">
+    <router-link v-if="$auth.isAuthenticated" to="/profile">Profile</router-link>
+    <!-- <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div> -->
+    <router-view/>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld';
-import { SidebarMenu } from 'vue-sidebar-menu'
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
+#nav {
+  padding: 30px;
 
-export default {
-  name: 'App',
+  a {
+    font-weight: bold;
+    color: #2c3e50;
 
-  components: {
-    HelloWorld,
-    // eslint-disable-next-line vue/no-unused-components
-    SidebarMenu,
-  },
-
-  data: () => ({
-    menu: [
-            {
-                header: true,
-                title: 'MENU',
-                hiddenOnCollapse: true
-            },
-            {
-                href: '/',
-                title: 'Friends',
-                icon: 'fa fa-user'
-            },
-            {
-                href: '/',
-                title: 'My Places',
-                icon: 'fa fa-chart-area',
-                child: [
-                    {
-                        href: '/',
-                        title: 'child'
-                    }
-                ]
-            }
-          ]
-  }),
-};
-</script>
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+</style>
