@@ -1,14 +1,16 @@
 <template>
   <v-app style="margin: 0px">
     <v-content>
-      <HelloWorld/>
+      <v-container id="container">
+        <HelloWorld/>
+      </v-container>
     </v-content>
-    <ListView/>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
+// import ListView from './components/ListView';
 
 export default {
   name: 'App',

@@ -1,5 +1,5 @@
 <template>
-  <v-container style="margin: 0px; padding: 0px">
+  <v-container id="map" style="margin: 0px; padding: 0px">
   <GmapMap
    :center="{lat:37.5095711, lng:127.0533331}"
    :zoom="15"
@@ -43,5 +43,5 @@ export default {
          text: "What's your name? <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/1200px-Natgeologo.svg.png' height=100/><input value='input'></input>", title: 'Warning'});   
   }
  }
-};
+}
 </script>
