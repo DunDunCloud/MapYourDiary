@@ -7,7 +7,7 @@ import * as VueGoogleMaps from 'vue2-google-maps'
 import VueSidebarMenu from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 
-import { domain, clientId } from "../auth_config.json";
+import { domain, clientId, audience } from "../auth_config.json";
 import { Auth0Plugin } from "./auth";
 
 Vue.use(VueSidebarMenu)
@@ -30,6 +30,7 @@ Vue.use(VuetifyDialog, {
 Vue.use(Auth0Plugin, {
   domain,
   clientId,
+  audience,
   onRedirectCallback: appState => {
     router.push(
       appState && appState.targetUrl
