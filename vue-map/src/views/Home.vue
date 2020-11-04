@@ -1,19 +1,17 @@
 <template>
   <div class="home" style="width: 99vw; height: 100vh">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-
-    <!-- Check that the SDK client is not currently loading before accessing is methods -->
-    
-    <!-- <SlideBar/> -->
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <HelloWorld/>
     <div v-if="!$auth.loading">
       <!-- show login when not authenticated -->
       <button v-if="!$auth.isAuthenticated" @click="login">Log in</button>
       <!-- show logout when authenticated -->
       <button v-if="$auth.isAuthenticated" @click="logout">Log out</button>
     </div>
+    <!-- Check that the SDK client is not currently loading before accessing is methods -->
+    
+    <!-- <SlideBar/> -->
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+    <HelloWorld/>
+    
   </div>
 </template>
 
