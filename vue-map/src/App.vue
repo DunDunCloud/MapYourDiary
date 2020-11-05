@@ -1,19 +1,12 @@
 <template>
   <div id="app">
-    <Nav/>
-    <router-link v-if="$auth.isAuthenticated" to="/profile">Profile</router-link>
     <router-view/>
   </div>
 </template>
 
 <script>
-import Nav from '@/components/Nav.vue'
-
 export default {
-  name: 'app',
-  components: {
-    Nav
-  }
+  name: 'app'
 }
 </script>
 

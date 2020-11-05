@@ -1,8 +1,8 @@
 <template>
-  <v-div class="home" style="width: 99vw; height: 100vh">
+  <div class="home" style="width: 99vw; height: 100vh">
     <SlideBar/>
     <HelloWorld/>
-  </v-div>
+  </div>
 </template>
 
 <script>
