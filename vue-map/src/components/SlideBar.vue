@@ -23,6 +23,7 @@ export default {
       },
       {
         href: '/',
+        type: Boolean,
         title: 'My Places',
         icon: 'fa fa-chart-area',
         child: [
