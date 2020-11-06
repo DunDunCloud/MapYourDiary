@@ -427,3 +427,24 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
     - 현재 에러와 진행상황을 확인하기 어려움.
 - serverless 구조 이해 필요
 
+# 회의록 6
+
+### 역할 분담
+- 찬진: Vue 공부, Navbar 마무리
+- 륜화: 지도의 현재위치 마커 생성과 이동
+- 진실: 지도 스타일 변경, 마커 생성
+- 찬영: sidebar 높이 조절
+
+### 완료된 항목
+- 지도 스타일 변경
+- 지도의 현재 위치 마커 생성과 이동
+
+### 이슈 사항
+- 지도 크기를 브라우저 크기에 따라 조절 필요
+- 지도에서 클릭한 지점에 마커 생성
+- vue 이해와 디자인
+- Django를 활용한 serverless 개발
+
+### 회의 결과
+- serverless framework와 Django를 연결하여 사용해야 한다.
+![구조](./img/시스템구조.png)
