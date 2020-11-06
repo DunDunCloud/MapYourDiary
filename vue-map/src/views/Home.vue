@@ -1,7 +1,7 @@
 <template>
-  <v-div class="home" style="width: 99vw; height: 100vh">
-    <SlideBar/>
-    <HelloWorld/>
+  <v-div class="home">
+      <SlideBar/>
+      <HelloWorld/>
   </v-div>
 </template>
 
@@ -15,6 +15,6 @@ export default {
   components: {
     HelloWorld,
     SlideBar
-  }
+   }
 }
 </script>

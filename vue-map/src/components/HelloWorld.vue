@@ -1,10 +1,10 @@
 <template>
   <v-container id="map" style="margin: 0px; padding: 0px">
-  <GmapMap
-  ref="mapRef"
+  <GmapMap ref="mapRef"
   :zoom="15"
+  :center="{lat:10, lng:10}"
   map-type-id="terrain"
-  style="width: 99.5vw; height: 100vh"
+  style="width: 100vw; height: 100vh"
   >
   <GmapMarker
    :key="index"
@@ -19,13 +19,13 @@
 </template>
 
 <script>
-var lat, lng;
+var lat1, lng1;
 if (navigator.geolocation){
   navigator.geolocation.getCurrentPosition(
     function(pos) {
-      lat = pos.coords.latitude;
-      lng = pos.coords.longitude;
-      alert("현재 위치는 : " + lat + ", "+ lng);
+      lat1 = pos.coords.latitude;
+      lng1 = pos.coords.longitude;
+      alert("현재 위치는 : " + lat1 + ", "+ lng1);
   });
 }else {
     alert('GPS를 지원하지 않습니다');
@@ -49,7 +49,7 @@ export default {
  },
  mounted () {
     this.$refs.mapRef.$mapPromise.then((map) => {
-      map.panTo({lat: lat, lng: lng})
+      map.panTo({lat: lat1, lng: lng1})
     })
 },
  methods: {
