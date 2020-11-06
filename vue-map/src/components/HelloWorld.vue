@@ -3,8 +3,8 @@
   <GmapMap ref="mapRef"
   :zoom="15"
   :center="{lat:10, lng:10}"
-  map-type-id="terrain"
-  style="width: 100vw; height: 100vh"
+  map-type-id="roadmap"
+  style="width: 100vw; height: 95vh"
   >
   <GmapMarker
    :key="index"
