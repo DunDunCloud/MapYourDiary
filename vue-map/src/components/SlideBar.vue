@@ -1,13 +1,21 @@
 <template>
 <div>
   <b-navbar>
-    <div>
+    <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
         <b-nav-item href="#">Map Your Diary</b-nav-item>
+      </b-navbar-nav>
+      <b-navbar-nav class="ml-auto">
+        <b-nav-form @submit.prevent="onSubmit">
+          <b-form-input v-model="place" size="sm" class="mr-sm-2" placeholder="장소 검색"></b-form-input>
+          <b-button size="sm" class="my-2 my-sm-0" type="submit">검색</b-button>
+        </b-nav-form>
         <b-button v-b-toggle.sidebar-variant2 variant="link">장소</b-button>
         <b-button v-b-toggle.sidebar-variant3 variant="link">친구</b-button>
         <b-button v-b-toggle.sidebar-variant4 variant="link">Test</b-button>
-
+        <v-btn color="warning" @click="confirm">
+          누르지마세요
+        </v-btn>
         <div v-if="!$auth.loading">
           <!-- show login when not authenticated -->
           <b-button v-if="!$auth.isAuthenticated" @click="login" variant="link">Log in</b-button>
@@ -17,7 +25,7 @@
           <!-- <router-link to="/external-api">External Api</router-link> -->
         </div>
       </b-navbar-nav>
-    </div>
+    </b-collapse>
       <b-sidebar id="sidebar-variant1" title="내 정보" shadow>
         <div class="px-3 py-2">
           <p v-if="$auth.isAuthenticated">
@@ -77,6 +85,12 @@ export default {
       this.$auth.logout({
         returnTo: window.location.origin
       });
+    },
+    onSubmit() {
+      alert(`${this.place} 입니다`);
+    },
+    confirm: function () {
+      this.$dialog.confirm({ title: '위험', text: '그래도 누를 것입니까?' })
     }
   }
 }

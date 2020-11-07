@@ -1,10 +1,30 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify/lib';
+import Vuetify, {
+  VSnackbar,
+  VIcon,
+  VDialog,
+  VSpacer,
+  VBtn,
+  VToolbar,
+  VToolbarTitle,
+  VAlert
+} from 'vuetify/lib';
 
-import Slider from '@jeremyhamm/vue-slider';
 
-Vue.use(Vuetify);
-Vue.use(Slider);
+Vue.use(Vuetify, {
+  iconfont: 'md',
+  components: {
+    VSnackbar,
+    VIcon,
+    VDialog,
+    VSpacer,
+    VBtn,
+    VToolbar,
+    VToolbarTitle,
+    VAlert
+  }
+})
 
 export default new Vuetify({
 });
+
