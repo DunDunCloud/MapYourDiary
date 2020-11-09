@@ -5,7 +5,6 @@ import vuetify from './plugins/vuetify';
 import VuetifyDialog from 'vuetify-dialog'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
-// import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { domain, clientId, audience } from "../auth_config.json";
