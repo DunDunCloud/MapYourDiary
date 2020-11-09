@@ -1,4 +1,5 @@
 <template>
+<v-app>
   <div id="app">
     <google-map class="googleMap" @click="addMarker">
 <div slot-scope="{ google, map }">
@@ -15,6 +16,7 @@ v-for="(marker, index) in markers"
     </google-map>
     <router-view/>
   </div>
+</v-app>
 </template>
 
 <script>
