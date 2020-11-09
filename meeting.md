@@ -344,7 +344,7 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 
   
 
-## 역할 분담
+### 역할 분담
 
 여찬진: AWS 계정 및 사용자 권한 관리, DB 구현
 
@@ -369,3 +369,82 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 - DB: MongoDB
 
 - 개발 언어: Python HTML5 CSS3 Vue.js
+
+
+# 회의록 2
+
+### 역할 분담
+
+- 찬진: DB(MongoDB 구축)  → EC2 인스턴스에 MongoDB 구축
+- 륜화: 구글 지도 마커 구현
+- 진실: read.me 회의록 추가, 카카오오븐 ui 설계
+- 찬영: 지도 띄우기
+
+
+# 회의록 3
+
+### 역할 분담
+- 찬진: EC2 인스턴스에 MongoDB 재 구축(버지니아) 및 연동
+- 륜화: 카카오오븐 ui 설계
+- 진실: navbar 기능 구현, 카카오오븐 ui 설계
+- 찬영: 지도 크기 조절, Auth0
+
+### 완료된 항목
+- ui 설계
+
+
+# 회의록 4
+
+### 역할 분담
+- 찬진: DB 테이블 구성, 연동
+- 륜화: 지도 마커 구현
+- 진실: side-bar 기본 틀 생성
+- 찬영: Auth0마무리, 로그인/로그아웃, 현재 위치 기반 지도표시
+
+### 완료된 항목
+- 로그인/로그아웃
+- 회원 프로필 보여주기
+- DB AWS와 연동
+
+
+# 회의록 5
+
+### 역할 분담
+- 찬진: DB 테이블 구성,
+- 륜화: 지도 마커 구현
+- 진실: side-bar 기본 틀 생성
+- 찬영: nav-bar 생성
+
+### 이슈 사항
+[이슈](https://github.com/DunDunCloud/MapYourDiary/issues/7)
+- 로그인 후 세션 유지
+- sidebar 아이콘 적용 실패
+    - [사용하고자 했던 sidebar](https://vuejsexamples.com/a-vue-js-sidebar-menu-component/)
+    - [bootstrap-vue](https://bootstrap-vue.org/docs) 의 navbar와 slider로 대체 [commit](https://github.com/DunDunCloud/MapYourDiary/commit/b768e7a8ed5bbabf3ddee8ee44233e90e91aa77f)
+    - ```npm install vue bootstrap-vue bootstrap```
+- slider와 navbar가 겹침.
+- 마커 구현
+    - 현재 에러와 진행상황을 확인하기 어려움.
+- serverless 구조 이해 필요
+
+# 회의록 6
+
+### 역할 분담
+- 찬진: Vue 공부, Navbar 마무리
+- 륜화: 지도의 현재위치 마커 생성과 이동
+- 진실: 지도 스타일 변경, 마커 생성
+- 찬영: sidebar 높이 조절
+
+### 완료된 항목
+- 지도 스타일 변경
+- 지도의 현재 위치 마커 생성과 이동
+
+### 이슈 사항
+- 지도 크기를 브라우저 크기에 따라 조절 필요
+- 지도에서 클릭한 지점에 마커 생성
+- vue 이해와 디자인
+- Django를 활용한 serverless 개발
+
+### 회의 결과
+- serverless framework와 Django를 연결하여 사용해야 한다.
+![구조](./img/시스템구조.png)

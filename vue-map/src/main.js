@@ -10,6 +10,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { domain, clientId, audience } from "../auth_config.json";
 import { Auth0Plugin } from "./auth";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import vueGoogleMapWrapper from '@/plugins/vue-google-map-wrapper'
 
 Vue.use(VueGoogleMaps, {
   load: {
@@ -17,6 +18,8 @@ Vue.use(VueGoogleMaps, {
     libraries: 'places'
   }
 })
+
+Vue.use(vueGoogleMapWrapper, { apiKey: 'AIzaSyD0VuxLCHgrHGPT1SitPMHecNCZHsbXe9A' })
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
