@@ -6,11 +6,12 @@
 
 <script>
 import axios from "axios";
+import { eventBus } from "../main.js"
 
 export default {
     name: "PostList",
     methods: {
-        getPost(){
+        getPost: function (){
             axios.get("http://127.0.0.1:8000/api/map", {auth: {
                 username: "admin",
                 password: "admin"
@@ -22,10 +23,18 @@ export default {
                 console.log(error)
             });
         },
-        postPost(){
-            axios.post("http://127.0.0.1:8000/api/map", {auth: {
+        postPost: function (){
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            
+            axios.post("http://127.0.0.1:8000/api/map",
+            {auth: {
                 username: "admin",
                 password: "admin"
+            },
+            params: {
+                title: title,
+                description: description
             }})
             .then(response => {
                 console.log(response.data);
@@ -33,8 +42,9 @@ export default {
             .catch(error => {
                 console.log(error)
             });
+            eventBus.$emit("click");
         },
-        deletePost(pageNum){
+        deletePost: function (pageNum){
             axios.delete("http://127.0.0.1:8000/api/map"+pageNum, {auth: {
                 username: "admin",
                 password: "admin"

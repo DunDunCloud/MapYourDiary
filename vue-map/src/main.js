@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import vuetify from './plugins/vuetify';
+import vuetify from './plugins/vuetify'
 import VuetifyDialog from 'vuetify-dialog'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
@@ -21,6 +21,7 @@ Vue.use(VueGoogleMaps, {
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
+Vue.prototype.$EventBus = new Vue();
 
 Vue.config.productionTip = false
 
@@ -43,9 +44,10 @@ Vue.use(Auth0Plugin, {
   }
 });
 
+export const eventBus = new Vue();
+
 new Vue({
   vuetify,
   router,
   render: h => h(App)
-
 }).$mount('#app')

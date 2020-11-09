@@ -14,12 +14,17 @@
    :draggable="true"
    @click="clickMarker"
   /> 
-  </GmapMap> 
+  </GmapMap>
+  <PostList/>
   </v-container>  
 </template>
 
 <script>
+import PostList from './PostList'
+
 var lat1, lng1;
+var post1 = "postPost"
+
 if (navigator.geolocation){
   navigator.geolocation.getCurrentPosition(
     function(pos) {
@@ -36,16 +41,14 @@ export default {
     return {
     markers: [{
       position: {
-      lat: 10.0,
-      lng: 10.0
+      lat: 37.5682,
+      lng: 126.9977
       }
-    }, {
-     position: {
-      lat: 11.0,
-      lng: 11.0
-     }
     }]
   };
+ },
+ components: {
+   PostList
  },
  mounted () {
     this.$refs.mapRef.$mapPromise.then((map) => {
@@ -53,9 +56,15 @@ export default {
     })
 },
  methods: {
+ 
   clickMarker: function () {  
-      this.$dialog.confirm({
-         text: "What's your name? <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/1200px-Natgeologo.svg.png' height=100/><input value='input'></input>", title: 'Warning'});   
+    this.$dialog.confirm({
+        text: 
+        "<div>제목</div> <input id='title'></input><br>\
+        <div>내용</div> <input id='description'></input><br>\
+        <button v-on:click=" + post1 + ">게시</button>",
+        title: "asd"
+    });   
   }
  }
 }
