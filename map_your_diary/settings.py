@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'map_your_diary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'testdb',
+        'NAME': 'testdb1',
         'HOST': 'localhost',
         'PORT': 27017,
     }

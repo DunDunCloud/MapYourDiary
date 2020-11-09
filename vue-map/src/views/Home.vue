@@ -1,20 +1,23 @@
 <template>
-  <v-div class="home">
+  <div class="home">
       <SlideBar/>
       <HelloWorld/>
-  </v-div>
+      <PostList/>
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import SlideBar from '@/components/SlideBar.vue'
+import PostList from '@/components/PostList.vue'
 
 export default {
   name: 'Home',
   components: {
     HelloWorld,
-    SlideBar
+    SlideBar,
+    PostList
    }
 }
 </script>
