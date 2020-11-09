@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  var lat1, lng1;
+  let lat1, lng1;
   if (navigator.geolocation){
     navigator.geolocation.getCurrentPosition(
       function(pos) {
@@ -89,7 +89,10 @@
     removeMarker (e) {
       // complete this part to remove our markers
       console.log(e.vb)
-    }
+    },
+      clickMarker () {
+
+      }
   }
 }
 

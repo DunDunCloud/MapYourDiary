@@ -33,6 +33,7 @@ Vue.use(VuetifyDialog, {
     vuetify
   }
 })
+document.body.setAttribute('data-app', true);
 
 Vue.use(Auth0Plugin, {
   domain,
