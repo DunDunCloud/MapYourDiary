@@ -83,11 +83,21 @@ WSGI_APPLICATION = 'map_your_diary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'testdb1',
+#         'HOST': 'localhost',
+#         'PORT': 27017,
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'testdb1',
-        'HOST': 'localhost',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'config',
+        'USER': 'admin',
+        'PASSWORD': 'admin',
+        'HOST': '127.0.0.1',
         'PORT': 27017,
     }
 }
@@ -115,9 +125,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'     # 사이트에 한글 있을 경우 변경
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'    # 서울 시간 표준
 
 USE_I18N = True
 
