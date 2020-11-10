@@ -29,7 +29,7 @@
       <b-sidebar id="sidebar-variant2" title="장소" shadow>
         <div class="px-3 py-2">
           <p>
-            여기에 장소 목록!   여기에 장소 목록!   여기에 장소 목록!   여기에 장소 목록!   여기에 장소 목록!
+            <PostList/>
           </p>
         </div>
       </b-sidebar>
@@ -61,11 +61,13 @@
 
 <script>
 import Profile from '@/views/Profile.vue'
+import PostList from '@/components/PostList.vue'
 
 export default {
   name: 'SlideBar',
   components: {
-    Profile
+    Profile,
+    PostList
   },
   methods: {
     // Log the user in
