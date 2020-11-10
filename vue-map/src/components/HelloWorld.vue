@@ -81,6 +81,7 @@ import MyModal from './MyModal'
         },
         key: e.vb.timestamp
       }
+      this.markers.pop()
       this.markers.push(newMarker)
     },
     removeMarker (e) {
