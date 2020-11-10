@@ -14,6 +14,7 @@ import { Auth0Plugin } from "./auth";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import vueGoogleMapWrapper from '@/plugins/vue-google-map-wrapper'
 
+Vue.prototype.$EventBus = new Vue();
 
 Vue.use(VueGoogleMaps, {
   load: {

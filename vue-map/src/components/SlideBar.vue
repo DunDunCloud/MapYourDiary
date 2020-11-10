@@ -30,9 +30,9 @@
 <!--          </p>-->
         </div>
       </b-sidebar>
-
       <b-sidebar bg-variant="white" id="sidebar-variant2" title="장소" width="400px" shadow>
           <PlaceList/>
+          <PostList/>
       </b-sidebar>
 
       <b-sidebar bg-variant="white" id="sidebar-variant3" title="친구" width="400px" shadow>
@@ -64,6 +64,7 @@ b-sidebar {
 
 <script>
 import Profile from '@/views/Profile.vue'
+import PostList from '@/components/PostList.vue'
 import PlaceList from '@/views/PlaceList.vue'
 import FriendsList from "@/views/FriendsList.vue";
 
@@ -73,6 +74,7 @@ export default {
   name: 'SlideBar',
   components: {
     Profile,
+    PostList,
     PlaceList,
     FriendsList
   },
