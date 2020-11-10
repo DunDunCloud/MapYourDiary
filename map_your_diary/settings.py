@@ -17,6 +17,7 @@ from six.moves.urllib import request
 from cryptography.x509 import load_pem_x509_certificate
 from cryptography.hazmat.backends import default_backend
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -93,8 +94,8 @@ WSGI_APPLICATION = 'map_your_diary.wsgi.application'
 # }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'config',
+        'ENGINE': 'djongo',
+        'NAME': 'local',
         'USER': 'admin',
         'PASSWORD': 'admin',
         'HOST': '127.0.0.1',

@@ -45,4 +45,13 @@
    $ npm run serve
    ```
 
-   
+3. Django 가상환경 세팅
+
+/MapYourDiary에서 
+```
+$ python -m venv venv
+
+$ source venv/Script/activate
+
+$ pip install -r "requirements.txt"
+```

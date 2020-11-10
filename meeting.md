@@ -461,29 +461,35 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 
 
 
+<<<<<<< HEAD
 - # 회의록 9
 
   ### 역할 분담
 
   - 찬진: serverless Framework, DB연동(MongoDB - Vue)
+=======
+# 회의록 9
 
-  - 륜화 - 마커 생성/삭제
+### 역할 분담
+>>>>>>> 44dc0c9b48a81b4eeb5e4d575ab02f9a8a990b61
 
-  - 진실 - 좋아요 기능
+- 찬진: Vue 공부, Navbar 마무리
 
-  - 찬영 - 정적 모달 구현
+- 륜화: 마커 생성/삭제
+
+- 찬영: 정적 모달 구현
 
     
+### 완료된 항목
 
-  ### 완료된 항목
-
-  - 정적 모달 구현
+- 정적 모달 구현
 
     
-
-  ### 이슈 사항
+### 이슈 사항
 
   - 지도 크기를 브라우저 크기에 따라 조절 필요
   - vue 이해와 디자인
   - Django를 활용한 serverless 개발 -> serverless framework 활용
   - 장소 검색/조회를 위한 장소 API 적용
+  
+  
