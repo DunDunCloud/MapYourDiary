@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import vuetify from './plugins/vuetify';
+import vuetify from './plugins/vuetify'
 import VuetifyDialog from 'vuetify-dialog'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
@@ -33,7 +33,6 @@ Vue.use(VuetifyDialog, {
     vuetify
   }
 })
-document.body.setAttribute('data-app', true);
 
 Vue.use(Auth0Plugin, {
   domain,

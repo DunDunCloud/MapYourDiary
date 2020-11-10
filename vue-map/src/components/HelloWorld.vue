@@ -15,7 +15,7 @@
     :draggable="true"
     @click="removeMarker"
     /> 
-  </GmapMap> 
+  </GmapMap>
   </v-container>  
 </template>
 

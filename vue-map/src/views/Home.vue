@@ -1,12 +1,12 @@
 <template>
-  <v-div class="home">
+  <div class="home">
       <SlideBar/>
       <HelloWorld/>
       <App/>
       <googleMapMarker/>
       <googleMapFactory/>
       <!-- <AppJs/> -->
-  </v-div>
+  </div>
 </template>
 
 <script>
