@@ -3,14 +3,17 @@ import App from './App.vue'
 import router from './router'
 import vuetify from './plugins/vuetify'
 import VuetifyDialog from 'vuetify-dialog'
+import VModal from 'vue-js-modal'
 import * as VueGoogleMaps from 'vue2-google-maps'
 
+// import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { domain, clientId, audience } from "../auth_config.json";
 import { Auth0Plugin } from "./auth";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import vueGoogleMapWrapper from '@/plugins/vue-google-map-wrapper'
+
 
 Vue.use(VueGoogleMaps, {
   load: {
@@ -23,8 +26,7 @@ Vue.use(vueGoogleMapWrapper, { apiKey: 'AIzaSyD0VuxLCHgrHGPT1SitPMHecNCZHsbXe9A'
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-
-Vue.prototype.$EventBus = new Vue();
+Vue.use(VModal, { dynamic: true })
 
 Vue.config.productionTip = false
 
@@ -47,10 +49,9 @@ Vue.use(Auth0Plugin, {
   }
 });
 
-export const eventBus = new Vue();
-
 new Vue({
   vuetify,
   router,
   render: h => h(App)
+
 }).$mount('#app')
