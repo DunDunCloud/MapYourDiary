@@ -371,6 +371,8 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 - 개발 언어: Python HTML5 CSS3 Vue.js
 
 
+
+
 # 회의록 2
 
 ### 역할 분담
@@ -379,6 +381,8 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 - 륜화: 구글 지도 마커 구현
 - 진실: read.me 회의록 추가, 카카오오븐 ui 설계
 - 찬영: 지도 띄우기
+
+
 
 
 # 회의록 3
@@ -393,6 +397,8 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 - ui 설계
 
 
+
+
 # 회의록 4
 
 ### 역할 분담
@@ -405,6 +411,8 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 - 로그인/로그아웃
 - 회원 프로필 보여주기
 - DB AWS와 연동
+
+
 
 
 # 회의록 5
@@ -427,6 +435,8 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
     - 현재 에러와 진행상황을 확인하기 어려움.
 - serverless 구조 이해 필요
 
+
+
 # 회의록 6
 
 ### 역할 분담
@@ -448,3 +458,32 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 ### 회의 결과
 - serverless framework와 Django를 연결하여 사용해야 한다.
 ![구조](./img/시스템구조.png)
+
+
+
+- # 회의록 10
+
+  ### 역할 분담
+
+  - 찬진: Vue 공부, Navbar 마무리
+
+  - 륜화 - 마커 생성/삭제
+
+  - 진실 - 좋아요 기능
+
+  - 찬영 - 정적 모달 구현
+
+    
+
+  ### 완료된 항목
+
+  - 정적 모달 구현
+
+    
+
+  ### 이슈 사항
+
+  - 지도 크기를 브라우저 크기에 따라 조절 필요
+  - vue 이해와 디자인
+  - Django를 활용한 serverless 개발 -> serverless framework 활용
+  - 장소 검색/조회를 위한 장소 API 적용
