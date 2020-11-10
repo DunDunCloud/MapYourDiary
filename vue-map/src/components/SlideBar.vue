@@ -30,11 +30,9 @@
 <!--          </p>-->
         </div>
       </b-sidebar>
-
       <b-sidebar bg-variant="white" id="sidebar-variant2" title="장소" width="400px" shadow>
           <PlaceList/>
           <PostList/>
-
       </b-sidebar>
 
       <b-sidebar bg-variant="white" id="sidebar-variant3" title="친구" width="400px" shadow>
