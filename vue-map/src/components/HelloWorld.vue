@@ -25,6 +25,7 @@
 import MyModal from './MyModal'
 
   var lat1, lng1;
+
   if (navigator.geolocation){
     navigator.geolocation.getCurrentPosition(
       function(pos) {
@@ -85,7 +86,10 @@ import MyModal from './MyModal'
     removeMarker (e) {
       // complete this part to remove our markers
       console.log(e.vb)
-    }
+    },
+      clickMarker () {
+
+      }
   }
 }
 </script>
