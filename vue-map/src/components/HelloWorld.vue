@@ -7,19 +7,23 @@
     style="width: 100vw; height: 95vh"
     @click="addMarker"
     >
+  
     <GmapMarker
     v-for="m in markers"
     :key= "m.key"
     :position="m.position"
     :clickable="true"
-    :draggable="true"
-    @click="removeMarker"
-    /> 
+    :draggable="false"
+    @click="$EventBus.$emit('open-modal')"
+    />
   </GmapMap>
+  <MyModal/>
   </v-container>  
 </template>
 
 <script>
+import MyModal from './MyModal'
+
   var lat1, lng1;
   if (navigator.geolocation){
     navigator.geolocation.getCurrentPosition(
@@ -39,14 +43,17 @@
         lat: 0.0,
         lng: 0.0
       },
-        markers: [
-        { position: { lat: 37.5, lng: 126.98 } },
-        { position: { lat: 37.5, lng: 126.99 } },
-        { position: { lat: 37.5, lng: 127.00 } },
-        { position: { lat: 37.5, lng: 127.01 } },
-        { position: { lat: 37.5, lng: 127.02 } }
-        ]
-        };
+      markers: [
+      { position: { lat: 37.5, lng: 126.98 } },
+      { position: { lat: 37.5, lng: 126.99 } },
+      { position: { lat: 37.5, lng: 127.00 } },
+      { position: { lat: 37.5, lng: 127.01 } },
+      { position: { lat: 37.5, lng: 127.02 } }
+      ]
+      };
+    },
+    components: {
+      MyModal
     },
     mounted () {
       this.getClientPosition()
@@ -64,17 +71,6 @@
       } else {
         alert('GPS system is not working properly')
       }
-  // addMarker (e) {
-  // const { lat, lng } = e.latLng.toJSON()
-  // this.markers.push({
-  // position: {
-  // lat, lng
-  // }
-  // })
-  // },
-  // panTo (e, map) {
-  // map.panTo(e.latLng)
-  // }
     },
     addMarker (e) {
       let newMarker = {
@@ -92,34 +88,4 @@
     }
   }
 }
-
-  // export default {
-  //   name: 'HelloWorld',
-  //   data() {
-  //     return {
-  //     markers: [{
-  //       position: {
-  //       lat: 10.0,
-  //       lng: 10.0
-  //       }
-  //     }, {
-  //      position: {
-  //       lat: 11.0,
-  //       lng: 11.0
-  //      }
-  //     }]
-  //   };
-  //  },
-  //  mounted () {
-  //     this.$refs.mapRef.$mapPromise.then((map) => {
-  //       map.panTo({lat: lat1, lng: lng1})
-  //     })
-  // },
-  //  methods: {
-  //   clickMarker: function () {  
-  //       this.$dialog.confirm({
-  //          text: "What's your name? <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/1200px-Natgeologo.svg.png' height=100/><input value='input'></input>", title: 'Warning'});   
-  //   }
-  //  }
-  // }
 </script>
