@@ -25,26 +25,21 @@
     </b-collapse>
       <b-sidebar bg-variant="white" id="sidebar-variant1" title="내 정보" width="400px" shadow>
         <div class="px-3 py-2">
-          <p v-if="$auth.isAuthenticated">
+<!--          <p v-if="$auth.isAuthenticated">-->
             <Profile/>
-          </p>
+<!--          </p>-->
         </div>
       </b-sidebar>
 
       <b-sidebar bg-variant="white" id="sidebar-variant2" title="장소" width="400px" shadow>
-        <div class="px-3 py-2">
-          <p>
-            여기에 장소 목록!   여기에 장소 목록!   여기에 장소 목록!   여기에 장소 목록!   여기에 장소 목록!
-          </p>
-        </div>
+          <PlaceList/>
       </b-sidebar>
 
       <b-sidebar bg-variant="white" id="sidebar-variant3" title="친구" width="400px" shadow>
-        <div class="px-3 py-2">
-          <p>
-            여기에 친구 목록!   여기에 친구 목록!   여기에 친구 목록!   여기에 친구 목록!   여기에 친구 목록!
-          </p>
-        </div>
+<!--          <p>-->
+<!--            여기에 친구 목록!   여기에 친구 목록!   여기에 친구 목록!   여기에 친구 목록!   여기에 친구 목록!-->
+<!--          </p>-->
+          <FriendsList/>
       </b-sidebar>
 
       <b-sidebar bg-variant="white" id="sidebar-variant4" title="Test" width="400px" shadow>
@@ -69,14 +64,19 @@ b-sidebar {
 
 <script>
 import Profile from '@/views/Profile.vue'
+import PlaceList from '@/views/PlaceList.vue'
+import FriendsList from "@/views/FriendsList.vue";
 
 let searchPlace;
 
 export default {
   name: 'SlideBar',
   components: {
-    Profile
+    Profile,
+    PlaceList,
+    FriendsList
   },
+
   methods: {
     // Log the user in
     login() {
@@ -101,7 +101,8 @@ export default {
         })
       })
       // this.$dialog.confirm({ title: '검색한 장소', text: `입력한 장소는 ${searchPlace}입니다.` })
-    }
+    },
+
   }
 }
 </script>
