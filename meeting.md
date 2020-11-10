@@ -461,11 +461,11 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 
 
 
-- # 회의록 10
+- # 회의록 9
 
   ### 역할 분담
 
-  - 찬진: Vue 공부, Navbar 마무리
+  - 찬진: serverless Framework, DB연동(MongoDB - Vue)
 
   - 륜화 - 마커 생성/삭제
 
