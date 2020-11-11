@@ -11,7 +11,8 @@ import { domain, clientId, audience } from "../auth_config.json";
 import { Auth0Plugin } from "./auth";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import vueGoogleMapWrapper from '@/plugins/vue-google-map-wrapper'
-
+import VModal from 'vue-js-modal'
+Vue.use(VModal)
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyD0VuxLCHgrHGPT1SitPMHecNCZHsbXe9A',
