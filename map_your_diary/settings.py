@@ -83,12 +83,16 @@ WSGI_APPLICATION = 'map_your_diary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# connecting string
+# mongodb://admin:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'testdb',
-        'HOST': 'localhost',
-        'PORT': 27017,
+        'NAME': 'admin',
+        'USER': 'admin',
+        'PASSWORD': 'dundun',
+        'HOST': 'mongodb://admin:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false',
+        # 'PORT': 27017,
     }
 }
 
