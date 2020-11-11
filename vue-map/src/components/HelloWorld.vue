@@ -7,20 +7,17 @@
     style="width: 100vw; height: 95vh"
     @click="addMarker"
     >
+  
     <GmapMarker
     v-for="m in markers"
     :key= "m.key"
     :position="m.position"
     :clickable="true"
     :draggable="false"
-    @click="popUpModal"
-    /> 
+    @click="$EventBus.$emit('open-modal')"
+    />
   </GmapMap>
-
-  <modal name="modal">
-    hello, world!
-  </modal>
-
+  <MyModal/>
   </v-container>  
 </template>
 
@@ -28,6 +25,7 @@
 import MyModal from './MyModal'
 
   var lat1, lng1;
+
   if (navigator.geolocation){
     navigator.geolocation.getCurrentPosition(
       function(pos) {
@@ -46,14 +44,17 @@ import MyModal from './MyModal'
         lat: 0.0,
         lng: 0.0
       },
-        markers: [
-        { position: { lat: 37.5, lng: 126.98 } },
-        { position: { lat: 37.5, lng: 126.99 } },
-        { position: { lat: 37.5, lng: 127.00 } },
-        { position: { lat: 37.5, lng: 127.01 } },
-        { position: { lat: 37.5, lng: 127.02 } }
-        ]
-        };
+      markers: [
+      { position: { lat: 37.5, lng: 126.98 } },
+      { position: { lat: 37.5, lng: 126.99 } },
+      { position: { lat: 37.5, lng: 127.00 } },
+      { position: { lat: 37.5, lng: 127.01 } },
+      { position: { lat: 37.5, lng: 127.02 } }
+      ]
+      };
+    },
+    components: {
+      MyModal
     },
     mounted () {
       this.getClientPosition()
@@ -69,36 +70,26 @@ import MyModal from './MyModal'
           this.clientPos.lng = pos.coords.longitude
         })
       } else {
-          alert('GPS system is not working properly')
-        }
-      },
-      addMarker (e) {
-        let newMarker = {
-          position: {
-            lat: e.latLng.lat(),
-            lng: e.latLng.lng()
-          },
-          key: e.vb.timestamp
-        }
-        this.markers.push(newMarker)
-      },
-      removeMarker (e) {
-        // complete this part to remove our markers
-        console.log(e.vb)
-      },
-      show () {
-            this.$modal.show('my-first-modal');
-      },
-      hide () {
-          this.$modal.hide('my-first-modal');
-      },
-      popUpModal(){
-        this.$modal.show(
-          MyModal,
-          { text: 'This text is passed as a property' },
-          { draggable: true }
-        )
+        alert('GPS system is not working properly')
       }
-    }
+    },
+    addMarker (e) {
+      let newMarker = {
+        position: {
+          lat: e.latLng.lat(),
+          lng: e.latLng.lng()
+        },
+        key: e.vb.timestamp
+      }
+      this.markers.push(newMarker)
+    },
+    removeMarker (e) {
+      // complete this part to remove our markers
+      console.log(e.vb)
+    },
+      clickMarker () {
+
+      }
   }
+}
 </script>

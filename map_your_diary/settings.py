@@ -86,12 +86,11 @@ WSGI_APPLICATION = 'map_your_diary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'testdb1',
+        'NAME': 'testdb',
         'HOST': 'localhost',
         'PORT': 27017,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -115,9 +114,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'     # 사이트에 한글 있을 경우 변경
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'    # 서울 시간 표준
 
 USE_I18N = True
 

@@ -11,10 +11,6 @@
     </v-a>
   </div>
   <div id="navbar" class="navbar-menu">
-    <!-- <div class="navbar-start">
-      <router-link to="/" class="navbar-item">Home</router-link>
-      <router-link to="/about" class="navbar-item">About</router-link>
-    </div> -->
     <v-div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
