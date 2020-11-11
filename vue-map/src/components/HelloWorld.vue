@@ -13,68 +13,92 @@
     :position="m.position"
     :clickable="true"
     :draggable="true"
-    @click="removeMarker"
-    /> 
+    @click="toggleInfoWindow(m,m.key)"
+    />
+
+    <gmap-info-window
+      :options="infoOptions"
+      :position="infoWindowPos"
+      :opened="infoWinOpen"
+      @closeclick="infoWinOpen=false"
+    >
+      <div v-html="infoContent"></div>
+    </gmap-info-window>
   </GmapMap>
   </v-container>  
 </template>
 
 <script>
-  let lat1, lng1;
-  if (navigator.geolocation){
-    navigator.geolocation.getCurrentPosition(
-      function(pos) {
-        lat1 = pos.coords.latitude;
-        lng1 = pos.coords.longitude;
-        alert("현재 위치는 : " + lat1 + ", "+ lng1);
-    });
-  }else {
-      alert('GPS를 지원하지 않습니다');
-  }
-  export default {
-    name: 'app',
-    data () {
-    return {
-      clientPos: {
-        lat: 0.0,
-        lng: 0.0
-      },
-        markers: [
+let lat1, lng1;
+if (navigator.geolocation){
+  navigator.geolocation.getCurrentPosition(
+    function(pos) {
+      lat1 = pos.coords.latitude;
+      lng1 = pos.coords.longitude;
+      alert("현재 위치는 : " + lat1 + ", "+ lng1);
+  });
+}else {
+    alert('GPS를 지원하지 않습니다');
+}
+export default {
+  name: 'app',
+  data () {
+  return {
+    infoContent: '',
+    infoWindowPos: {
+      lat: 0,
+      lng: 0
+    },
+    infoWinOpen: false,
+    currentMidx: null,
+    //optional: offset infowindow so it visually sits nicely on top of our marker
+    infoOptions: {
+      pixelOffset: {
+        width: 0,
+        height: -35
+      }
+    },
+    clientPos: {
+      lat: 0.0,
+      lng: 0.0
+    },
+      markers: [
         { position: { lat: 37.5, lng: 126.98 } },
         { position: { lat: 37.5, lng: 126.99 } },
         { position: { lat: 37.5, lng: 127.00 } },
         { position: { lat: 37.5, lng: 127.01 } },
-        { position: { lat: 37.5, lng: 127.02 } }
-        ]
-        };
-    },
-    mounted () {
-      this.getClientPosition()
-      this.$refs.mapRef.$mapPromise.then((map) => {
-        map.panTo(this.clientPos)
+        { position: { lat: 37.5, lng: 127.02 } },
+        { position: { lat: 37.5717888, lng: 126.6679808 }}
+      ]
+      };
+  },
+  mounted () {
+    this.getClientPosition()
+    this.$refs.mapRef.$mapPromise.then((map) => {
+      map.panTo(this.clientPos)
+    })
+  },
+  methods: {
+    getClientPosition(){
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(pos => {
+        this.clientPos.lat = pos.coords.latitude
+        this.clientPos.lng = pos.coords.longitude
       })
-    },
-    methods: {
-      getClientPosition(){
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(pos => {
-          this.clientPos.lat = pos.coords.latitude
-          this.clientPos.lng = pos.coords.longitude
-        })
-      } else {
-        alert('GPS system is not working properly')
-      }
-  // addMarker (e) {
-  // const { lat, lng } = e.latLng.toJSON()
-  // this.markers.push({
-  // position: {
-  // lat, lng
-  // }
-  // })
-  // },
-  // panTo (e, map) {
-  // map.panTo(e.latLng)
-  // }
+    } else {
+      alert('GPS system is not working properly')
+    }
+// addMarker (e) {
+// const { lat, lng } = e.latLng.toJSON()
+// this.markers.push({
+// position: {
+// lat, lng
+// }
+// })
+// },
+// panTo (e, map) {
+// map.panTo(e.latLng)
+// }
     },
     addMarker (e) {
       let newMarker = {
@@ -86,15 +110,45 @@
       }
       this.markers.push(newMarker)
     },
-    removeMarker (e) {
+    removeMarker (place) {
       // complete this part to remove our markers
-      console.log(e.vb)
+      // console.log(place.geometry.location)
+      console.log(place.vb)
     },
-      clickMarker () {
+    toggleInfoWindow(marker, idx) {
+      this.infoWindowPos = marker.position;
+      this.infoContent = this.getInfoWindowContent();
 
+      //check if its the same marker that was selected if yes toggle
+      if (this.currentMidx == idx) {
+        this.infoWinOpen = !this.infoWinOpen;
       }
+      //if different marker set infowindow to open and reset current marker index
+      else {
+        this.infoWinOpen = true;
+        this.currentMidx = idx;
+      }
+    },
+    getInfoWindowContent() {
+      return (`<v-card class="pa-2" outlined>
+<card-content>
+    <v-card-actions>
+      <v-btn color="primary" class="ma-2">
+        상세정보
+      </v-btn>
+      <v-btn depressed color="primary">
+        글쓰기
+      </v-btn>
+      <v-btn depressed color="primary">
+        길찾기
+      </v-btn>
+    </v-card-actions>
+</card-content>
+</v-card>`);
+    },
   }
 }
+// <!--        padding="3rem" min-width="25rem" min-height="5rem"-->
 
   // export default {
   //   name: 'HelloWorld',

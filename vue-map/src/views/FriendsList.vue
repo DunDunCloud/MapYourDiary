@@ -24,7 +24,11 @@
               <v-list-item-subtitle>{{ item.text }}</v-list-item-subtitle>
             </v-list-item-content>
 
-<!--            <v-list-item-action>-->
+            <v-list-item-action>
+              <v-btn icon @click="set(item)">
+                <v-icon>mdi-dots-vertical</v-icon>
+              </v-btn>
+            </v-list-item-action>
 <!--              <v-btn icon>-->
 <!--                <v-icon color="grey lighten-1">-->
 <!--                  mdi-information-->
@@ -53,6 +57,9 @@
     methods: {
       test(item) {
         alert(item.name)
+      },
+      set(item) {
+        console.log(item.name)
       }
     }
   }
