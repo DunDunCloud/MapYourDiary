@@ -90,8 +90,20 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'admin',
         'USER': 'admin',
+        # connecting string
+# mongodb://admin:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'admin',
+        'USER': 'admin',
         'PASSWORD': 'dundun',
         'HOST': 'mongodb://admin:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false',
+        
+        # 'PORT': 27017,
+    }
+}
+        'PASSWORD': 'dundun',
         # 'PORT': 27017,
     }
 }
