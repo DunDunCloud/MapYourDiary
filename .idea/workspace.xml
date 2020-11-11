@@ -110,7 +110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604305068813</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="마커 팝업창">
+      <created>1605053754211</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605053754211</updated>
+    </task>
+    <task id="LOCAL-00003" summary="gitignore 추가">
+      <created>1605054028745</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605054028745</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,17 +156,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="회의록 기록" />
-    <option name="LAST_COMMIT_MESSAGE" value="회의록 기록" />
+    <MESSAGE value="마커 팝업창" />
+    <MESSAGE value="gitignore 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore 추가" />
   </component>
   <component name="WindowStateProjectService">
     <state x="267" y="19" key="#Inspections" timestamp="1604306070884">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="267" y="19" key="#Inspections/0.0.1280.680@0.0.1280.680" timestamp="1604306070884" />
-    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604332707511">
+    <state x="435" y="127" key="#Web_Browsers" timestamp="1605004331447">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604332707511" />
+    <state x="435" y="127" key="#Web_Browsers/0.0.1280.680@0.0.1280.680" timestamp="1605004331447" />
+    <state x="401" y="141" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605006755552">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="401" y="141" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1605006755552" />
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605028876515">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605028876515" />
+    <state x="122" y="51" key="DiffContextDialog" timestamp="1605054127182">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="122" y="51" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1605054127182" />
     <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1604333573757">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
