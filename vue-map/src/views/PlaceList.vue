@@ -1,30 +1,36 @@
 <template>
+ <!-- <div>
+<p v-for="(post, index) in postsPlace" :key="index">
+        {{ post.id }} <br>
+        {{ post.title }} <br>
+        {{ post.description  }} <br><br>
+</p>
+</div> -->
   <v-row>
-    <v-col
-      cols="12"
-    >
+     {{ dislike }}
+    <v-col>
       <v-card>
         <v-list>
-          <v-list-item
-            v-for="place in places"
-            :key="place.id"
-          >
-            <v-list-item-avatar>
-              <img :src="place.avatar">
+          <v-list-item-group>
+          <v-list-item v-for="post in postsPlace" :key="post.id">
+            {{post.id}}
+            <!-- <v-list-item-avatar>
+               <img :src="place.avatar"> 
             </v-list-item-avatar>
 
-            <v-list-item-content>
-              <v-list-item-title>{{ place.name }}</v-list-item-title>
-
-              <v-list-item-subtitle>{{ place.address }}</v-list-item-subtitle>
-            </v-list-item-content>
-
+            <v-list-item-content> -->
+            {{ post.id }}
+            {{ post.title }}
+            {{ post.description }}
+              <!-- <v-list-item-title>{{ post.title }}</v-list-item-title>
+              <v-list-item-subtitle>{{ post.description }}</v-list-item-subtitle>
+            </v-list-item-content> -->
             <v-list-item-action>
               <img class="like-btn" :place="place" @click="click_like(place)" v-if="place.like_status" :src="like" alt="">
               <img class="like-btn" :place="place" @click="click_like(place)" v-else :src="dislike" alt="">
             </v-list-item-action>
           </v-list-item>
-
+          </v-list-item-group>
         </v-list>
       </v-card>
     </v-col>
@@ -42,18 +48,15 @@
 import heart from '@/assets/img/heart.png'
 import heartNo from '@/assets/img/heart_n.png'
 
-
+let postsPlace2 = []
 export default {
   name: 'PlaceCard',
-  data () {
+
+  data: () => {
     return {
       like: heart,
       dislike: heartNo,
-      places: [
-        { id:0, avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg', name: '경복궁', address: '서울특별시 종로구 세종로 사직로 161', like_status: false },
-        { id:1, avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg', name: '창경궁', address: '서울특별시 종로구 세종로 사직로 161', like_status: false  },
-        { id:2, avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg', name: '덕수궁', address: '서울특별시 종로구 세종로 사직로 161', like_status: false  },
-      ],
+      postsPlace: []
     }
   },
   methods: {
@@ -70,6 +73,17 @@ export default {
         // db에 값 변경 or 추가
       }
     }
+  },
+  created () {
+    this.$EventBus.$on("post-list", posts  => {
+      this.postsPlace = posts
+      console.log(posts)
+      console.log(this.postsPlace)
+      console.log(postsPlace2)
+      console.log(this.dislike)
+      this.dislike = 'test'
+      console.log(this.dislike)
+    })
   }
 }
 </script>

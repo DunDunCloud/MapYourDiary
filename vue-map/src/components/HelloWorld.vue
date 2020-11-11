@@ -84,7 +84,6 @@ import MyModal from './MyModal'
       this.markers.push(newMarker)
     },
     removeMarker (e) {
-      // complete this part to remove our markers
       console.log(e.vb)
     },
       clickMarker () {

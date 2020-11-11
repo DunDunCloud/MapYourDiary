@@ -1,16 +1,17 @@
 <template>
 <div>
+    <!-- <PlaceList :posts="this.posts"></PlaceList> -->
     <p v-for="(post, index) in posts" :key="index">
         {{ post.id }} <br>
         {{ post.title }} <br>
         {{ post.description  }} <br><br>
     </p>
-
 </div>
 </template>
 
 <script>
 import axios from "axios";
+// import PlaceList from "@/views/PlaceList";
 
 export default {
     name: "PostList",
@@ -20,6 +21,9 @@ export default {
             posts: []
         }
     },
+    // components: {
+    //     PlaceList
+    // }, 
 
     methods: {
         getPost: function (){
@@ -30,11 +34,18 @@ export default {
             }})
             .then(response => {
                 console.log(response.data);
-                this.posts=response.data;
+                // this.posts = JSON.stringify(response.data);
+                this.posts = response.data;
+                console.log(this.posts)
+                // JSON.parse(JSON.stringify(this.posts))
+                this.$EventBus.$emit("post-list", JSON.parse(JSON.stringify(this.posts)))
             })
             .catch(error => {
                 console.log(error)
-            });
+            })
+            .finally(() => {
+                
+            })
         }
     },
     created() {
