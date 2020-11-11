@@ -17,6 +17,7 @@ from six.moves.urllib import request
 from cryptography.x509 import load_pem_x509_certificate
 from cryptography.hazmat.backends import default_backend
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -83,12 +84,17 @@ WSGI_APPLICATION = 'map_your_diary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# connecting string
+# mongodb://admin:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'testdb',
-        'HOST': 'localhost',
-        'PORT': 27017,
+        'NAME': 'admin',
+        'USER': 'admin',
+        'PASSWORD': 'dundun',
+        'HOST': 'mongodb://admin:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false',
+
+        # 'PORT': 27017,
     }
 }
 
