@@ -461,9 +461,17 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 
 
 
+<<<<<<< HEAD
+- # 회의록 9
+
+  ### 역할 분담
+
+  - 찬진: serverless Framework, DB연동(MongoDB - Vue)
+=======
 # 회의록 9
 
 ### 역할 분담
+>>>>>>> 44dc0c9b48a81b4eeb5e4d575ab02f9a8a990b61
 
 - 찬진: Vue 공부, Navbar 마무리
 
