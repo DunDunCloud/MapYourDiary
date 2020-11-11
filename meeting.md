@@ -483,5 +483,94 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
   - vue 이해와 디자인
   - Django를 활용한 serverless 개발 -> serverless framework 활용
   - 장소 검색/조회를 위한 장소 API 적용
-  
-  
+
+
+
+
+# 회의록 10
+
+
+
+## 역할 분담
+
+- 찬진: serverless Framework 설치 & lambda 함수 생성, DB연동(MongoDB - Vue)
+- 륜화:
+- 진실: 장소 & 친구 목록 front-end, 좋아요 기능
+- 찬영:
+
+
+
+### 오늘 완료한 일정
+
+- 로컬 DB 연동
+- 장소 & 친구 목록 front-end
+
+
+
+### 참고 자료
+
+- 친구 & 장소 목록에 사용한 vuetify 소스
+
+    [https://vuetifyjs.com/en/components/floating-action-buttons/#small-variant](https://vuetifyjs.com/en/components/floating-action-buttons/#small-variant)
+
+    - vue for문으로 이벤트 처리 예시
+
+        method에 매개변수로 data를 전달해서 활용 가능
+
+    ```javascript
+    <template>
+    	<v-list-item
+    	  v-for="place in places"
+    	  :key="place.id"
+    		:place="place"
+    		@click="test(place)"
+    	>
+    		:
+    	</v-list-item
+    </template>
+
+    <script>
+    export default {
+      name: 'PlaceCard',
+      data () {
+    		return {
+          places: [
+            { id:0, name: '경복궁' },
+            { id:1, name: '창경궁' },
+    							:
+          ],
+        }
+      },
+      methods: {
+        test(place) {
+    			console.log(place.name);
+        }
+      }
+    }
+    </script>
+
+    ```
+
+    - image 동적으로 호출하는 방법
+
+        import로 이미지를 가져오고, data에서 return 해준 후, src를 bind해서 사용
+
+    ```javascript
+    <template>
+    	<img :src="like">
+    </template>
+
+    <script>
+    import heart from '@/assets/img/heart.png'
+
+    export default {
+      name: 'PlaceCard',
+      data () {
+        return {
+          like: heart
+    				:
+    		}
+    	},
+    	:
+    </script>
+    ```

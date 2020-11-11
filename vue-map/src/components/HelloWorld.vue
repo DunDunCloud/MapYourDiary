@@ -7,18 +7,30 @@
     style="width: 100vw; height: 95vh"
     @click="addMarker"
     >
-  
+
     <GmapMarker
     v-for="m in markers"
     :key= "m.key"
     :position="m.position"
     :clickable="true"
     :draggable="false"
+    @click="toggleInfoWindow(m,m.key)"
+    />
+
+    <gmap-info-window
+      :options="infoOptions"
+      :position="infoWindowPos"
+      :opened="infoWinOpen"
+      @closeclick="infoWinOpen=false"
+    >
+      <div v-html="infoContent"></div>
+    </gmap-info-window>
+    :draggable="false"
     @click="$EventBus.$emit('open-modal')"
     />
   </GmapMap>
   <MyModal/>
-  </v-container>  
+  </v-container>
 </template>
 
 <script>
@@ -40,6 +52,20 @@ import MyModal from './MyModal'
     name: 'app',
     data () {
     return {
+      infoContent: '',
+      infoWindowPos: {
+        lat: 0,
+        lng: 0
+      },
+      infoWinOpen: false,
+      currentMidx: null,
+      //optional: offset infowindow so it visually sits nicely on top of our marker
+      infoOptions: {
+        pixelOffset: {
+          width: 0,
+          height: -35
+        }
+      },
       clientPos: {
         lat: 0.0,
         lng: 0.0
@@ -84,13 +110,74 @@ import MyModal from './MyModal'
       this.markers.pop()
       this.markers.push(newMarker)
     },
-    removeMarker (e) {
+    removeMarker (place) {
       // complete this part to remove our markers
-      console.log(e.vb)
+      // console.log(place.geometry.location)
+      console.log(place.vb)
     },
-      clickMarker () {
+    toggleInfoWindow(marker, idx) {
+      this.infoWindowPos = marker.position;
+      this.infoContent = this.getInfoWindowContent();
 
+      //check if its the same marker that was selected if yes toggle
+      if (this.currentMidx == idx) {
+        this.infoWinOpen = !this.infoWinOpen;
       }
+      //if different marker set infowindow to open and reset current marker index
+      else {
+        this.infoWinOpen = true;
+        this.currentMidx = idx;
+      }
+    },
+    getInfoWindowContent() {
+      return (`<v-card class="pa-2" outlined>
+<card-content>
+    <v-card-actions>
+      <v-btn color="primary" class="ma-2">
+        상세정보
+      </v-btn>
+      <v-btn depressed color="primary">
+        글쓰기
+      </v-btn>
+      <v-btn depressed color="primary">
+        길찾기
+      </v-btn>
+    </v-card-actions>
+</card-content>
+</v-card>`);
+    },
   }
 }
+// <!--        padding="3rem" min-width="25rem" min-height="5rem"-->
+
+
+  // export default {
+  //   name: 'HelloWorld',
+  //   data() {
+  //     return {
+  //     markers: [{
+  //       position: {
+  //       lat: 10.0,
+  //       lng: 10.0
+  //       }
+  //     }, {
+  //      position: {
+  //       lat: 11.0,
+  //       lng: 11.0
+  //      }
+  //     }]
+  //   };
+  //  },
+  //  mounted () {
+  //     this.$refs.mapRef.$mapPromise.then((map) => {
+  //       map.panTo({lat: lat1, lng: lng1})
+  //     })
+  // },
+  //  methods: {
+  //   clickMarker: function () {  
+  //       this.$dialog.confirm({
+  //          text: "What's your name? <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/1200px-Natgeologo.svg.png' height=100/><input value='input'></input>", title: 'Warning'});   
+  //   }
+  //  }
+  // }
 </script>
