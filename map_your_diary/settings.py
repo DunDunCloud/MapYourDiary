@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': 'admin',
         'USER': 'dundun',
         'PASSWORD': 'dundun',
-        'HOST': 'mongodb://dundun:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false
+        'HOST': 'mongodb://dundun:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false'
 
         # 'PORT': 27017,
     }
