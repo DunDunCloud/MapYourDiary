@@ -39,7 +39,6 @@
 
 <script>
 import MyModal from './MyModal'
-import test from '@/assets/test.html'
 
   var lat1, lng1;
 
@@ -152,7 +151,7 @@ import test from '@/assets/test.html'
   //     </v-card-actions>
   // </card-content>
   // </v-card>`)
-        return (`<div onclick="javascript:onclick('test()');">test</div>`)
+        return (`<div  @click="$EventBus.$emit('open-marker-popup')">test</div>`)
       },
       // test() {
       //   console.log('test성공');

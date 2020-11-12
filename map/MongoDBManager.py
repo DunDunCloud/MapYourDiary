@@ -3,7 +3,7 @@ from pymongo.cursor import CursorType
 
 class DBHandler:
     def __init__(self):
-        host = "localhost"
+        host = "34.202.159.8"
         port = "27017"
         self.client = MongoClient(host, int(port))
 
