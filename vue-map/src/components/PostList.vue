@@ -1,14 +1,3 @@
-<template>
-<div>
-    <!-- <PlaceList :posts="this.posts"></PlaceList> -->
-    <p v-for="(post, index) in posts" :key="index">
-        {{ post.id }} <br>
-        {{ post.title }} <br>
-        {{ post.description  }} <br><br>
-    </p>
-</div>
-</template>
-
 <script>
 import axios from "axios";
 // import PlaceList from "@/views/PlaceList";

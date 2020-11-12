@@ -1,40 +1,25 @@
 <template>
- <!-- <div>
-<p v-for="(post, index) in postsPlace" :key="index">
+ <div>
+<!-- <p v-for="(post, index) in postsPlace" :key="index">
         {{ post.id }} <br>
         {{ post.title }} <br>
         {{ post.description  }} <br><br>
-</p>
-</div> -->
-  <v-row>
-     {{ dislike }}
-    <v-col>
-      <v-card>
-        <v-list>
-          <v-list-item-group>
-          <v-list-item v-for="post in postsPlace" :key="post.id">
-            {{post.id}}
-            <!-- <v-list-item-avatar>
-               <img :src="place.avatar"> 
-            </v-list-item-avatar>
+</p> -->
+<b-card no-body header="Card with flush list group">
+    <b-list-group flush v-for="(post, index) in postsPlace" :key="index">
+      <b-list-group-item href="#">{{ post.id }}</b-list-group-item>
+      <b-list-group-item href="#">{{ post.title }}</b-list-group-item>
+      <b-list-group-item href="#">{{ post.description }}</b-list-group-item>
+    </b-list-group>
 
-            <v-list-item-content> -->
-            {{ post.id }}
-            {{ post.title }}
-            {{ post.description }}
-              <!-- <v-list-item-title>{{ post.title }}</v-list-item-title>
-              <v-list-item-subtitle>{{ post.description }}</v-list-item-subtitle>
-            </v-list-item-content> -->
-            <v-list-item-action>
-              <img class="like-btn" :place="place" @click="click_like(place)" v-if="place.like_status" :src="like" alt="">
-              <img class="like-btn" :place="place" @click="click_like(place)" v-else :src="dislike" alt="">
-            </v-list-item-action>
-          </v-list-item>
-          </v-list-item-group>
-        </v-list>
-      </v-card>
-    </v-col>
-  </v-row>
+    <b-card-body>
+      Quis magna Lorem anim amet ipsum do mollit sit cillum voluptate ex nulla tempor. Laborum
+      consequat non elit enim exercitation cillum aliqua consequat id aliqua. Esse ex consectetur
+      mollit voluptate est in duis laboris ad sit ipsum anim Lorem.
+    </b-card-body>
+  </b-card>
+</div>
+
 </template>
 
 <style>
@@ -48,7 +33,6 @@
 import heart from '@/assets/img/heart.png'
 import heartNo from '@/assets/img/heart_n.png'
 
-let postsPlace2 = []
 export default {
   name: 'PlaceCard',
 
@@ -79,10 +63,6 @@ export default {
       this.postsPlace = posts
       console.log(posts)
       console.log(this.postsPlace)
-      console.log(postsPlace2)
-      console.log(this.dislike)
-      this.dislike = 'test'
-      console.log(this.dislike)
     })
   }
 }
