@@ -85,18 +85,31 @@ WSGI_APPLICATION = 'map_your_diary.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 # connecting string - 일반 관리자 계정
+# admin DB dunun 계정으로 접속
 # mongodb://dundun:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'admin',
+        'HOST': 'mongodb://dundun:dundun@34.202.159.8:27017/admin',
+        # 'HOST': 'ec2-34-202-159-8.compute-1.amazonaws.com',
+        'PORT': '27017',
         'USER': 'dundun',
         'PASSWORD': 'dundun',
-        'HOST': 'mongodb://dundun:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false'
-
-        # 'PORT': 27017,
     }
 }
+
+
+# MapYourDiary DB에 cloud 계정으로 접속
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'djongo',
+#         'NAME': 'MapYourDiary',
+#         'USER': 'cloud',
+#         'PASSWORD': 'dundun',
+#         'HOST': 'mongodb://cloud:dundun@34.202.159.8:27017/?authSource=MapYourDiary&readPreference=primary&ssl=false
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -120,9 +133,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'ko-kr'     # 사이트에 한글 있을 경우 변경
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'Asia/Seoul'    # 서울 시간 표준
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
