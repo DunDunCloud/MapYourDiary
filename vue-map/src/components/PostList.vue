@@ -23,7 +23,7 @@ export default {
 
     methods: {
         getPost: function (){
-            axios.get("http://14.39.38.10:8000/api/map", {auth: {
+            axios.get("http://127.0.0.1:8000/api/map", {auth: {
                 username: "admin",
                 password: "admin",
                 

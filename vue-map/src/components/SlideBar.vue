@@ -113,8 +113,8 @@ export default {
     },
     getPost() {
       axios.get("http://127.0.0.1:8000/api/map", {auth:{
-        username: "cloud",
-          password: "dundun",
+        username: "admin",
+          password: "admin",
         }})
         .then(response => {
           console.log(response.data);
