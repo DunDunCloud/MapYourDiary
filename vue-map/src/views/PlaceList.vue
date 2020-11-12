@@ -20,7 +20,7 @@
             </v-list-item-content>
 
             <v-list-item-action>
-              <img class="like-btn" :place="place" @click="click_like(place)" v-if="place.like_status" :src="like" alt="">
+              <img class="like-btn" :place="place" @click="click_like(place)" v-if="place.published" :src="like" alt="">
               <img class="like-btn" :place="place" @click="click_like(place)" v-else :src="dislike" alt="">
             </v-list-item-action>
           </v-list-item>
@@ -59,11 +59,11 @@ export default {
   methods: {
     // 좋아요
     click_like(place) {
-      if (place.like_status) {
-        place.like_status = false;
+      if (place.published) {
+        place.published = false;
         // db에 값 변경 or 추가
       } else {
-        place.like_status = true;
+        place.published = true;
         // db에 값 변경 or 추가
       }
     },
