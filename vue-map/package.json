@@ -23,6 +23,7 @@
     "stylus": "^0.54.8",
     "stylus-loader": "^4.2.0",
     "vue": "^2.6.12",
+    "vue-eagle-modal": "^1.0.6",
     "vue-loader": "^15.9.5",
     "vue-router": "^3.2.0",
     "vue-sidebar-menu": "^4.7.3",

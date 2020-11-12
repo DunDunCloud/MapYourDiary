@@ -14,26 +14,22 @@
     :position="m.position"
     :clickable="true"
     :draggable="false"
-    @click="toggleInfoWindow(m, m.key)"
+    @click="$EventBus.$emit('open-modal')"
     />
+<!--      $EventBus.$emit('open-modal')-->
 <!--    <MarkerBtns/>-->
-      <!--    @click="toggleInfoWindow(m,m.key)"-->
-
-<!--      "$EventBus.$emit('open-modal')"-->
-<!--      :draggable="false"-->
 <!--    @click="toggleInfoWindow(m,m.key)"-->
-<!--          @click="$EventBus.$emit('open-marker-popup')"-->
     <gmap-info-window
       :options="infoOptions"
       :position="infoWindowPos"
       :opened="infoWinOpen"
       @closeclick="infoWinOpen=false"
     >
-<!--      <div id="MarkerBtns" v-show="disable"></div>-->
-      <div v-html="infoContent"></div>
+<!--      <div v-html="infoContent"></div>-->
     </gmap-info-window>
   </GmapMap>
   <MyModal/>
+<!--    <Modal2/>-->
   </v-container>
 </template>
 
@@ -135,27 +131,23 @@ import MyModal from './MyModal'
         }
       },
       getInfoWindowContent() {
-  //
-  //       return (`<v-card class="pa-2" outlined>
-  // <card-content>
-  //     <v-card-actions>
-  //       <v-btn color="primary" class="ma-2">
-  //         상세정보
-  //       </v-btn>
-  //       <v-btn depressed color="primary">
-  //         글쓰기
-  //       </v-btn>
-  //       <v-btn depressed color="primary" v-on:click=test">
-  //         길찾기
-  //       </v-btn>
-  //     </v-card-actions>
-  // </card-content>
-  // </v-card>`)
-        return (`<div  @click="$EventBus.$emit('open-marker-popup')">test</div>`)
+        return (`<v-card class="pa-2" outlined>
+    <v-btn @click="onClose">Close</v-btn>
+  <card-content>
+      <v-card-actions>
+        <v-btn color="primary" class="ma-2" @click="showmodal = true">
+          상세정보
+        </v-btn>
+        <v-btn depressed color="primary" v-on:click="test">
+          글쓰기
+        </v-btn>
+        <v-btn depressed color="primary" v-on:click="test">
+          길찾기
+        </v-btn>
+      </v-card-actions>
+  </card-content>
+  </v-card>`)
       },
-      // test() {
-      //   console.log('test성공');
-      // }
   }
 }
 // <!--        padding="3rem" min-width="25rem" min-height="5rem"-->

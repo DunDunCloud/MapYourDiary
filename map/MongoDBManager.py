@@ -3,8 +3,8 @@ from pymongo.cursor import CursorType
 
 class DBHandler:
     def __init__(self):
-        host = "34.202.159.8"
-        port = "27017"
+        host = 'mongodb://dundun:dundun@34.202.159.8:27017/admin'
+        port = 27017
         self.client = MongoClient(host, int(port))
 
     def insert_item_one(self, data, db_name=None, collection_name=None):
@@ -41,5 +41,6 @@ class DBHandler:
 
 # 예제
 mongo = DBHandler()
-mongo.find_item_one(None, "test", "test")
+result = mongo.find_item_one(None, "MapYourDiary", "places")
 
+print(result)
