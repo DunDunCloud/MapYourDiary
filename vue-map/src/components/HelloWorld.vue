@@ -14,20 +14,24 @@
     :position="m.position"
     :clickable="true"
     :draggable="false"
-    @click="toggleInfoWindow(m,m.key)"
+    @click="toggleInfoWindow(m, m.key)"
     />
+<!--    <MarkerBtns/>-->
+      <!--    @click="toggleInfoWindow(m,m.key)"-->
 
+<!--      "$EventBus.$emit('open-modal')"-->
+<!--      :draggable="false"-->
+<!--    @click="toggleInfoWindow(m,m.key)"-->
+<!--          @click="$EventBus.$emit('open-marker-popup')"-->
     <gmap-info-window
       :options="infoOptions"
       :position="infoWindowPos"
       :opened="infoWinOpen"
       @closeclick="infoWinOpen=false"
     >
+<!--      <div id="MarkerBtns" v-show="disable"></div>-->
       <div v-html="infoContent"></div>
     </gmap-info-window>
-    :draggable="false"
-    @click="$EventBus.$emit('open-modal')"
-    />
   </GmapMap>
   <MyModal/>
   </v-container>
@@ -35,6 +39,7 @@
 
 <script>
 import MyModal from './MyModal'
+import test from '@/assets/test.html'
 
   var lat1, lng1;
 
@@ -80,7 +85,7 @@ import MyModal from './MyModal'
       };
     },
     components: {
-      MyModal
+      MyModal,
     },
     mounted () {
       this.getClientPosition()
@@ -99,57 +104,63 @@ import MyModal from './MyModal'
         alert('GPS system is not working properly')
       }
     },
-    addMarker (e) {
-      let newMarker = {
-        position: {
-          lat: e.latLng.lat(),
-          lng: e.latLng.lng()
-        },
-        key: e.vb.timestamp
-      }
-      this.markers.pop()
-      this.markers.push(newMarker)
-    },
-    removeMarker (place) {
-      // complete this part to remove our markers
-      // console.log(place.geometry.location)
-      console.log(place.vb)
-    },
-    toggleInfoWindow(marker, idx) {
-      this.infoWindowPos = marker.position;
-      this.infoContent = this.getInfoWindowContent();
+      addMarker (e) {
+        let newMarker = {
+          position: {
+            lat: e.latLng.lat(),
+            lng: e.latLng.lng()
+          },
+          key: e.vb.timestamp
+        }
+        this.markers.pop()
+        this.markers.push(newMarker)
+      },
+      openSidebar(marker, idx) {
+        let m = marker
+        let i = idx
+        console.log(m, i)
+        this.$refs.placesidebar.open;
+      },
+      toggleInfoWindow(marker, idx) {
+        this.infoWindowPos = marker.position;
+        this.infoContent = this.getInfoWindowContent();
 
-      //check if its the same marker that was selected if yes toggle
-      if (this.currentMidx == idx) {
-        this.infoWinOpen = !this.infoWinOpen;
-      }
-      //if different marker set infowindow to open and reset current marker index
-      else {
-        this.infoWinOpen = true;
-        this.currentMidx = idx;
-      }
-    },
-    getInfoWindowContent() {
-      return (`<v-card class="pa-2" outlined>
-<card-content>
-    <v-card-actions>
-      <v-btn color="primary" class="ma-2">
-        상세정보
-      </v-btn>
-      <v-btn depressed color="primary">
-        글쓰기
-      </v-btn>
-      <v-btn depressed color="primary">
-        길찾기
-      </v-btn>
-    </v-card-actions>
-</card-content>
-</v-card>`);
-    },
+        //check if its the same marker that was selected if yes toggle
+        if (this.currentMidx == idx) {
+          this.infoWinOpen = !this.infoWinOpen;
+        }
+        //if different marker set infowindow to open and reset current marker index
+        else {
+          this.infoWinOpen = true;
+          this.currentMidx = idx;
+        }
+      },
+      getInfoWindowContent() {
+  //
+  //       return (`<v-card class="pa-2" outlined>
+  // <card-content>
+  //     <v-card-actions>
+  //       <v-btn color="primary" class="ma-2">
+  //         상세정보
+  //       </v-btn>
+  //       <v-btn depressed color="primary">
+  //         글쓰기
+  //       </v-btn>
+  //       <v-btn depressed color="primary" v-on:click=test">
+  //         길찾기
+  //       </v-btn>
+  //     </v-card-actions>
+  // </card-content>
+  // </v-card>`)
+        return (`<div onclick="javascript:onclick('test()');">test</div>`)
+      },
+      // test() {
+      //   console.log('test성공');
+      // }
   }
 }
 // <!--        padding="3rem" min-width="25rem" min-height="5rem"-->
-
+// `<div onclick="javascript:onclick();">test</div>`
 
   // export default {
   //   name: 'HelloWorld',

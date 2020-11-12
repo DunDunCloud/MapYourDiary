@@ -36,17 +36,15 @@
       </b-sidebar>
 
       <b-sidebar bg-variant="white" id="sidebar-variant3" title="친구" width="400px" shadow>
-<!--          <p>-->
-<!--            여기에 친구 목록!   여기에 친구 목록!   여기에 친구 목록!   여기에 친구 목록!   여기에 친구 목록!-->
-<!--          </p>-->
           <FriendsList/>
       </b-sidebar>
 
-      <b-sidebar bg-variant="white" id="sidebar-variant4" title="Test" width="400px" shadow>
+      <b-sidebar bg-variant="white" id="sidebar-variant4" ref="placesidebar" :open="open" :close="close" title="Test" width="400px" shadow>
         <div class="px-3 py-2">
-          <p>
-            여기에 넣고 싶은거!   여기에 넣고 싶은거!   여기에 넣고 싶은거!   여기에 넣고 싶은거!   여기에 넣고 싶은거!
-          </p>
+          <PlaceDetailList/>
+<!--          <p>-->
+<!--            여기에 넣고 싶은거!   여기에 넣고 싶은거!   여기에 넣고 싶은거!   여기에 넣고 싶은거!   여기에 넣고 싶은거!-->
+<!--          </p>-->
         </div>
       </b-sidebar>
   </b-navbar>
@@ -67,6 +65,7 @@ import Profile from '@/views/Profile.vue'
 import PostList from '@/components/PostList.vue'
 import PlaceList from '@/views/PlaceList.vue'
 import FriendsList from "@/views/FriendsList.vue";
+import PlaceDetailList from "@/views/PlaceDetailList";
 
 let searchPlace;
 
@@ -76,9 +75,14 @@ export default {
     Profile,
     PostList,
     PlaceList,
-    FriendsList
+    FriendsList,
+    PlaceDetailList
   },
-
+  data() {
+    return {
+      place: ''
+    }
+  },
   methods: {
     // Log the user in
     login() {
@@ -98,7 +102,7 @@ export default {
         // eslint-disable-next-line no-unused-vars
       }).then(r => console.log(r)).then(r => {
         this.$dialog.notify.info('test notification', {
-          position: 'top-right',
+          position: 'bottom-right',
           timeout: 5000
         })
       })
