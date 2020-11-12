@@ -3,7 +3,7 @@ from pymongo.cursor import CursorType
 
 class DBHandler:
     def __init__(self):
-        host = 'mongodb://admin:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false'
+        host = 'mongodb://dundun:dundun@34.202.159.8:27017/admin'
         port = 27017
         self.client = MongoClient(host, int(port))
 
@@ -41,5 +41,6 @@ class DBHandler:
 
 # 예제
 mongo = DBHandler()
-result = mongo.find_item_one(None, "customDB", "books")
+result = mongo.find_item_one(None, "MapYourDiary", "places")
+
 print(result)
