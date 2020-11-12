@@ -84,15 +84,15 @@ WSGI_APPLICATION = 'map_your_diary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# connecting string
-# mongodb://admin:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false
+# connecting string - 일반 관리자 계정
+# mongodb://dundun:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'admin',
-        'USER': 'admin',
+        'USER': 'dundun',
         'PASSWORD': 'dundun',
-        'HOST': 'mongodb://admin:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false',
+        'HOST': 'mongodb://dundun:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false
 
         # 'PORT': 27017,
     }
