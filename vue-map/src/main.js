@@ -12,6 +12,9 @@ import { domain, clientId, audience } from "../auth_config.json";
 import { Auth0Plugin } from "./auth";
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import vueGoogleMapWrapper from '@/plugins/vue-google-map-wrapper'
+import {EagleModal} from 'vue-eagle-modal'
+
+Vue.use(EagleModal);
 
 Vue.prototype.$EventBus = new Vue();
 

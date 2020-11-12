@@ -33,6 +33,7 @@
       <b-sidebar bg-variant="white" id="sidebar-variant2" title="장소" width="400px" shadow>
           <PlaceList/>
           <PostList/>
+          <span>{{ testdata }}</span>
       </b-sidebar>
 
       <b-sidebar bg-variant="white" id="sidebar-variant3" title="친구" width="400px" shadow>
@@ -66,6 +67,7 @@ import PostList from '@/components/PostList.vue'
 import PlaceList from '@/views/PlaceList.vue'
 import FriendsList from "@/views/FriendsList.vue";
 import PlaceDetailList from "@/views/PlaceDetailList";
+import axios from "axios"
 
 let searchPlace;
 
@@ -80,7 +82,8 @@ export default {
   },
   data() {
     return {
-      place: ''
+      place: '',
+      testdata: ''
     }
   },
   methods: {
@@ -108,7 +111,21 @@ export default {
       })
       // this.$dialog.confirm({ title: '검색한 장소', text: `입력한 장소는 ${searchPlace}입니다.` })
     },
-
+    getPost() {
+      axios.get("http://127.0.0.1:8000/api/map", {auth:{
+        username: "cloud",
+          password: "dundun",
+        }})
+        .then(response => {
+          console.log(response.data);
+          this.testdata = JSON.parse(JSON.stringify(this.posts));
+        }).catch(error => {
+          console.log(error);
+      }).finally(() => {})
+    }
+  },
+  created() {
+    this.getPost();
   }
 }
 </script>
