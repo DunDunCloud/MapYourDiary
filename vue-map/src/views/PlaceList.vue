@@ -68,22 +68,24 @@ export default {
       }
     },
     getPost (){
-            axios.get("http://127.0.0.1:8000/api/map", {auth: {
-                username: "admin",
-                password: "admin",
-
-            }})
-            .then(response => {
-                console.log(response.data);
-                this.places=response.data;
-            })
-            .catch(error => {
-                console.log(error)
-            });
-        },
+      axios.get("http://127.0.0.1:8000/api/map", {auth: {
+          username: "admin",
+          password: "admin",
+      }})
+      .then(response => {
+          console.log(response.data);
+          this.places=response.data;
+          this.$EventBus.$on('get-post', () => {
+            this.getPost();
+          })
+      })
+      .catch(error => {
+          console.log(error)
+      });
+    },
   },
   created() {
       this.getPost();
-    }
+  }
 }
 </script>

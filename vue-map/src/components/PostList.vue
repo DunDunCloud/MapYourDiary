@@ -1,6 +1,5 @@
 <script>
 import axios from "axios";
-// import PlaceList from "@/views/PlaceList";
 
 export default {
     name: "PostList",
@@ -10,13 +9,10 @@ export default {
             posts: []
         }
     },
-    // components: {
-    //     PlaceList
-    // }, 
 
     methods: {
-        getPost: function (){
-            axios.get("http://127.0.0.1:8000/api/map", {auth: {
+        getPost: async function (){
+            await axios.get("http://127.0.0.1:8000/api/map", {auth: {
                 username: "admin",
                 password: "admin",
                 
@@ -38,28 +34,6 @@ export default {
         }
     },
     created() {
-        this.getPost();
-        this.$EventBus.$on('post-post', () => {
-            const title = document.getElementById('title').value;
-            const description = document.getElementById('description').value;
-            
-            axios.post("http://127.0.0.1:8000/api/map",
-            {auth: {
-                username: "admin",
-                password: "admin"
-            },
-            params: {
-                title: title,
-                description: description
-            }})
-            .then(response => {
-                console.log(response.data);
-            })
-            .catch(error => {
-                console.log(error)
-            });
-        });
-        
         this.$EventBus.$on('delete-post', (pageNum) => {
             axios.delete("http://127.0.0.1:8000/api/map"+pageNum, {auth: {
                 username: "admin",

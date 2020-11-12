@@ -32,7 +32,6 @@
       </b-sidebar>
       <b-sidebar bg-variant="white" id="sidebar-variant2" title="장소" width="400px" shadow>
           <PlaceList/>
-          <PostList/>
           <span>{{ testdata }}</span>
       </b-sidebar>
 
@@ -40,7 +39,7 @@
           <FriendsList/>
       </b-sidebar>
 
-      <b-sidebar bg-variant="white" id="sidebar-variant4" ref="placesidebar" :open="open" :close="close" title="Test" width="400px" shadow>
+      <b-sidebar bg-variant="white" id="sidebar-variant4" ref="placesidebar"  title="Test" width="400px" shadow>
         <div class="px-3 py-2">
           <PlaceDetailList/>
 <!--          <p>-->
@@ -63,7 +62,6 @@ b-sidebar {
 
 <script>
 import Profile from '@/views/Profile.vue'
-import PostList from '@/components/PostList.vue'
 import PlaceList from '@/views/PlaceList.vue'
 import FriendsList from "@/views/FriendsList.vue";
 import PlaceDetailList from "@/views/PlaceDetailList";
@@ -75,7 +73,6 @@ export default {
   name: 'SlideBar',
   components: {
     Profile,
-    PostList,
     PlaceList,
     FriendsList,
     PlaceDetailList
