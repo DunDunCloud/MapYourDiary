@@ -582,3 +582,82 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
     	:
     </script>
     ```
+
+
+
+# 회의록 12
+
+
+
+## 역할 분담
+
+- 찬진: serverless Framework 설치 & lambda 함수 생성, DB연동(MongoDB - Vue)
+- 륜화: 장소 검색
+- 진실: vue에서 DB 조회
+- 찬영: 모달에서 DB에 데이터 추가
+
+
+
+### 오늘 완료한 일정
+
+- DB와 django 연동
+
+
+
+### 참고 자료
+
+### python manage.py migrate 에서 decode error 났을 때
+
+sqlparser나 djongo의 버전이 낮아서 [해결링크](https://github.com/nesdis/djongo/issues/156)
+
+```
+$ pip install --upgrade sqlparse
+$ pip install --upgrade djongo
+```
+
+
+
+### vue에서 DB 조회하는 방법
+
+- data에서 vue template에서 사용할 변수들을 선언
+- axios로 DB와 통신하는 method 작성
+- created() 에서 조회하는 method 실행
+
+```
+import axios from "axios";
+
+export default {
+  name: 'PlaceCard',
+  data () {
+    return {
+      like: heart,
+      dislike: heartNo,
+      places: [],
+    }
+  },
+  methods: {
+    getPost (){
+            axios.get("http://127.0.0.1:8000/api/map", {auth: {
+                username: "admin",
+                password: "admin",
+
+            }})
+            .then(response => {
+                console.log(response.data);
+                this.places=response.data;
+            })
+            .catch(error => {
+                console.log(error)
+            });
+        },
+  },
+  created() {
+      this.getPost();
+    }
+}
+```
+
+- vue template에서 data사용할 때
+
+`{{ place.title }}` 이런식으로 중괄호 두개로 사용가능
+
