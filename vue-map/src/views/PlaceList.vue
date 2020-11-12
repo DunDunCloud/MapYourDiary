@@ -10,13 +10,13 @@
             :key="place.id"
           >
             <v-list-item-avatar>
-              <img :src="place.avatar">
+<!--              <img :src="place.avatar">-->
             </v-list-item-avatar>
 
             <v-list-item-content>
-              <v-list-item-title>{{ place.name }}</v-list-item-title>
+              <v-list-item-title>{{ place.title }}</v-list-item-title>
 
-              <v-list-item-subtitle>{{ place.address }}</v-list-item-subtitle>
+              <v-list-item-subtitle>{{ place.description }}</v-list-item-subtitle>
             </v-list-item-content>
 
             <v-list-item-action>
@@ -44,7 +44,7 @@
 <script>
 import heart from '@/assets/img/heart.png'
 import heartNo from '@/assets/img/heart_n.png'
-
+import axios from "axios";
 
 export default {
   name: 'PlaceCard',
@@ -52,17 +52,10 @@ export default {
     return {
       like: heart,
       dislike: heartNo,
-      places: [
-        { id:0, avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg', name: '경복궁', address: '서울특별시 종로구 세종로 사직로 161', like_status: false },
-        { id:1, avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg', name: '창경궁', address: '서울특별시 종로구 세종로 사직로 161', like_status: false  },
-        { id:2, avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg', name: '덕수궁', address: '서울특별시 종로구 세종로 사직로 161', like_status: false  },
-      ],
+      places: [],
     }
   },
   methods: {
-    // test() {
-    //   alert(this.places[0].name)
-    // },
     // 좋아요
     click_like(place) {
       if (place.like_status) {
@@ -72,7 +65,24 @@ export default {
         place.like_status = true;
         // db에 값 변경 or 추가
       }
+    },
+    getPost (){
+            axios.get("http://127.0.0.1:8000/api/map", {auth: {
+                username: "admin",
+                password: "admin",
+
+            }})
+            .then(response => {
+                console.log(response.data);
+                this.places=response.data;
+            })
+            .catch(error => {
+                console.log(error)
+            });
+        },
+  },
+  created() {
+      this.getPost();
     }
-  }
 }
 </script>
