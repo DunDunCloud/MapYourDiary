@@ -14,12 +14,14 @@
             <v-row>
               <v-col cols="12">
                 <v-text-field
+                  id="diary_title" 
                   label="글 제목*"
                   required
                 ></v-text-field>
               </v-col>
               <v-col cols="12">
                 <v-text-field v-model="testdata"
+                  id="diary_description" 
                   label="내용*"
                   required
                 ></v-text-field>
@@ -51,14 +53,16 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  props: {
-     show: {
-       type: Boolean,
-       required: true,
-       twoWay: true
-     }
-  },
+  // props: {
+  //    show: {
+  //      type: Boolean,
+  //      required: true,
+  //      twoWay: true
+  //    }
+  // },
   data: function(){
     return {
       dialog: false,
@@ -71,14 +75,31 @@ export default {
     });
   },
   methods: {
-    saveDiary() {
+    async saveDiary() {
       this.dialog = false
-      // axios.post('127.0.0.1:8000/api/map', {name: this.testdata})
-      //   .then(res => {
-      //     console.log(res);
-      //   })
-    },
+      const title = document.getElementById('diary_title').value;
+      const description = document.getElementById('diary_description').value;
+      
+      console.log(title, description)
 
+      await axios.post("http://127.0.0.1:8000/api/map",{
+        title: title,
+        description: description
+      },{
+        auth:{
+          username: "admin",
+          password: "admin"
+        }
+      })
+      .then(response => {
+          console.log(response.data);
+          this.$EventBus.$emit('get-post');
+      })
+      .catch(error => {
+          console.log(error)
+      });
+      
+    },
   }
 }
 </script>

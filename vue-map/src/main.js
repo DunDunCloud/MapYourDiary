@@ -16,6 +16,8 @@ import {EagleModal} from 'vue-eagle-modal'
 
 Vue.use(EagleModal);
 
+// Vue.use(VModal)
+
 Vue.prototype.$EventBus = new Vue();
 
 Vue.use(VueGoogleMaps, {

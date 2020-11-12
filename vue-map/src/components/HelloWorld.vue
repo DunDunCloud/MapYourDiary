@@ -35,7 +35,6 @@
 
 <script>
 import MyModal from './MyModal'
-// import Modal2 from './Modal2'
 
   var lat1, lng1;
 
@@ -151,36 +150,4 @@ import MyModal from './MyModal'
       },
   }
 }
-// <!--        padding="3rem" min-width="25rem" min-height="5rem"-->
-// `<div onclick="javascript:onclick();">test</div>`
-
-  // export default {
-  //   name: 'HelloWorld',
-  //   data() {
-  //     return {
-  //     markers: [{
-  //       position: {
-  //       lat: 10.0,
-  //       lng: 10.0
-  //       }
-  //     }, {
-  //      position: {
-  //       lat: 11.0,
-  //       lng: 11.0
-  //      }
-  //     }]
-  //   };
-  //  },
-  //  mounted () {
-  //     this.$refs.mapRef.$mapPromise.then((map) => {
-  //       map.panTo({lat: lat1, lng: lng1})
-  //     })
-  // },
-  //  methods: {
-  //   clickMarker: function () {  
-  //       this.$dialog.confirm({
-  //          text: "What's your name? <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Natgeologo.svg/1200px-Natgeologo.svg.png' height=100/><input value='input'></input>", title: 'Warning'});   
-  //   }
-  //  }
-  // }
 </script>

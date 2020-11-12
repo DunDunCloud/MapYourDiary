@@ -20,7 +20,7 @@
             </v-list-item-content>
 
             <v-list-item-action>
-              <img class="like-btn" :place="place" @click="click_like(place)" v-if="place.like_status" :src="like" alt="">
+              <img class="like-btn" :place="place" @click="click_like(place)" v-if="place.published" :src="like" alt="">
               <img class="like-btn" :place="place" @click="click_like(place)" v-else :src="dislike" alt="">
             </v-list-item-action>
           </v-list-item>
@@ -48,7 +48,8 @@ import axios from "axios";
 
 export default {
   name: 'PlaceCard',
-  data () {
+
+  data: () => {
     return {
       like: heart,
       dislike: heartNo,
@@ -58,31 +59,33 @@ export default {
   methods: {
     // 좋아요
     click_like(place) {
-      if (place.like_status) {
-        place.like_status = false;
+      if (place.published) {
+        place.published = false;
         // db에 값 변경 or 추가
       } else {
-        place.like_status = true;
+        place.published = true;
         // db에 값 변경 or 추가
       }
     },
     getPost (){
-            axios.get("http://127.0.0.1:8000/api/map", {auth: {
-                username: "admin",
-                password: "admin",
-
-            }})
-            .then(response => {
-                console.log(response.data);
-                this.places=response.data;
-            })
-            .catch(error => {
-                console.log(error)
-            });
-        },
+      axios.get("http://127.0.0.1:8000/api/map", {auth: {
+          username: "admin",
+          password: "admin",
+      }})
+      .then(response => {
+          console.log(response.data);
+          this.places=response.data;
+          this.$EventBus.$on('get-post', () => {
+            this.getPost();
+          })
+      })
+      .catch(error => {
+          console.log(error)
+      });
+    },
   },
   created() {
       this.getPost();
-    }
+  }
 }
 </script>
