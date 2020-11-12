@@ -1,3 +1,6 @@
+.idea
+.venv
+
 .vscode
 # Created by https://www.toptal.com/developers/gitignore/api/vue,django,visualstudiocode,python,venv
 # Edit at https://www.toptal.com/developers/gitignore?templates=vue,django,visualstudiocode,python,venv

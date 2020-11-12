@@ -27,6 +27,9 @@
   width: 30px;
   height: auto;
 }
+.like-btn {
+  cursor: pointer;
+}
 </style>
 
 <script>
