@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'map',
     'rest_framework',
-    'rest_framework_jwt',
+    'rest_framework_jwt'
 ]
 
 MIDDLEWARE = [
@@ -95,7 +95,7 @@ WSGI_APPLICATION = 'map_your_diary.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'MapYourDiary',
+        'NAME': 'test2162',
         'HOST': 'mongodb://dundun:dundun@34.202.159.8:27017/admin',
         # 'HOST': 'ec2-34-202-159-8.compute-1.amazonaws.com',
         'PORT': '27017',
