@@ -57,6 +57,52 @@ def diary_list(request):
         count = PlacePost.objects.all().delete()
         return JsonResponse({'message': '{} MapPosts were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
 
+@api_view(['POST'])
+def post_like_input(request):
+    if request.method == 'POST':
+        like_data = JSONParser().parse(request)
+        like_serializer = LikeSerializer(data=like_data)
+
+        if like_serializer.is_valid():
+            like_serializer.save()
+            return JsonResponse(like_serializer.data, status=status.HTTP_201_CREATED) 
+        return JsonResponse(like_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# Post Like
+@api_view(['GET', 'PUT', 'POST'])
+def post_like(request, pk):
+    # find tutorial by pk (id)
+    try: 
+        map = PostLike.objects.get(pk=pk) 
+    except PostLike.DoesNotExist: 
+        return JsonResponse({'message': 'The post does not exist'}, status=status.HTTP_404_NOT_FOUND) 
+ 
+    # GET / PUT / DELETE tutorial
+    if request.method == 'GET': 
+        like_serializer = LikeSerializer(map) 
+        return JsonResponse(like_serializer.data)
+
+    elif request.method == 'POST':
+        like_data = JSONParser().parse(request)
+        like_serializer = LikeSerializer(data=like_data)
+
+        if like_serializer.is_valid():
+            like_serializer.save()
+            return JsonResponse(like_serializer.data, status=status.HTTP_201_CREATED) 
+        return JsonResponse(like_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    elif request.method == 'PUT': 
+        like_data = JSONParser().parse(request) 
+        like_serializer = LikeSerializer(map, data=like_data) 
+        if like_serializer.is_valid(): 
+            like_serializer.save() 
+            return JsonResponse(like_serializer.data) 
+        return JsonResponse(like_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+    elif request.method == 'DELETE': 
+        map.delete() 
+        return JsonResponse({'message': 'map was deleted successfully!'}, status=status.HTTP_204_NO_CONTENT)
+
 @api_view(['GET', 'PUT', 'DELETE'])
 def post_detail(request, pk):
     # find tutorial by pk (id)
