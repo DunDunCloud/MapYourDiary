@@ -1,36 +1,30 @@
 <template>
- <!-- <div>
-<p v-for="(post, index) in postsPlace" :key="index">
-        {{ post.id }} <br>
-        {{ post.title }} <br>
-        {{ post.description  }} <br><br>
-</p>
-</div> -->
   <v-row>
-     {{ dislike }}
-    <v-col>
+    <v-col
+      cols="12"
+    >
       <v-card>
         <v-list>
-          <v-list-item-group>
-          <v-list-item v-for="post in postsPlace" :key="post.id">
-            {{post.id}}
-            <!-- <v-list-item-avatar>
-               <img :src="place.avatar"> 
+          <v-list-item
+            v-for="place in places"
+            :key="place.id"
+          >
+            <v-list-item-avatar>
+<!--              <img :src="place.avatar">-->
             </v-list-item-avatar>
 
-            <v-list-item-content> -->
-            {{ post.id }}
-            {{ post.title }}
-            {{ post.description }}
-              <!-- <v-list-item-title>{{ post.title }}</v-list-item-title>
-              <v-list-item-subtitle>{{ post.description }}</v-list-item-subtitle>
-            </v-list-item-content> -->
+            <v-list-item-content>
+              <v-list-item-title>{{ place.title }}</v-list-item-title>
+
+              <v-list-item-subtitle>{{ place.description }}</v-list-item-subtitle>
+            </v-list-item-content>
+
             <v-list-item-action>
-              <img class="like-btn" :place="place" @click="click_like(place)" v-if="place.like_status" :src="like" alt="">
+              <img class="like-btn" :place="place" @click="click_like(place)" v-if="place.published" :src="like" alt="">
               <img class="like-btn" :place="place" @click="click_like(place)" v-else :src="dislike" alt="">
             </v-list-item-action>
           </v-list-item>
-          </v-list-item-group>
+
         </v-list>
       </v-card>
     </v-col>
@@ -42,13 +36,16 @@
   width: 30px;
   height: auto;
 }
+.like-btn {
+  cursor: pointer;
+}
 </style>
 
 <script>
 import heart from '@/assets/img/heart.png'
 import heartNo from '@/assets/img/heart_n.png'
+import axios from "axios";
 
-let postsPlace2 = []
 export default {
   name: 'PlaceCard',
 
@@ -56,34 +53,39 @@ export default {
     return {
       like: heart,
       dislike: heartNo,
-      postsPlace: []
+      places: [],
     }
   },
   methods: {
-    // test() {
-    //   alert(this.places[0].name)
-    // },
     // 좋아요
     click_like(place) {
-      if (place.like_status) {
-        place.like_status = false;
+      if (place.published) {
+        place.published = false;
         // db에 값 변경 or 추가
       } else {
-        place.like_status = true;
+        place.published = true;
         // db에 값 변경 or 추가
       }
-    }
+    },
+    getPost (){
+      axios.get("http://127.0.0.1:8000/api/map", {auth: {
+          username: "admin",
+          password: "admin",
+      }})
+      .then(response => {
+          console.log(response.data);
+          this.places=response.data;
+          this.$EventBus.$on('get-post', () => {
+            this.getPost();
+          })
+      })
+      .catch(error => {
+          console.log(error)
+      });
+    },
   },
-  created () {
-    this.$EventBus.$on("post-list", posts  => {
-      this.postsPlace = posts
-      console.log(posts)
-      console.log(this.postsPlace)
-      console.log(postsPlace2)
-      console.log(this.dislike)
-      this.dislike = 'test'
-      console.log(this.dislike)
-    })
+  created() {
+      this.getPost();
   }
 }
 </script>

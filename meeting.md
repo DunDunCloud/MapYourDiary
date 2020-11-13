@@ -461,9 +461,17 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
 
 
 
+<<<<<<< HEAD
+- # 회의록 9
+
+  ### 역할 분담
+
+  - 찬진: serverless Framework, DB연동(MongoDB - Vue)
+=======
 # 회의록 9
 
 ### 역할 분담
+>>>>>>> 44dc0c9b48a81b4eeb5e4d575ab02f9a8a990b61
 
 - 찬진: Vue 공부, Navbar 마무리
 
@@ -483,5 +491,173 @@ https://cloud.google.com/maps-platform/pricing?hl=ko
   - vue 이해와 디자인
   - Django를 활용한 serverless 개발 -> serverless framework 활용
   - 장소 검색/조회를 위한 장소 API 적용
-  
-  
+
+
+
+
+# 회의록 10
+
+
+
+## 역할 분담
+
+- 찬진: serverless Framework 설치 & lambda 함수 생성, DB연동(MongoDB - Vue)
+- 륜화:
+- 진실: 장소 & 친구 목록 front-end, 좋아요 기능
+- 찬영:
+
+
+
+### 오늘 완료한 일정
+
+- 로컬 DB 연동
+- 장소 & 친구 목록 front-end
+
+
+
+### 참고 자료
+
+- 친구 & 장소 목록에 사용한 vuetify 소스
+
+    [https://vuetifyjs.com/en/components/floating-action-buttons/#small-variant](https://vuetifyjs.com/en/components/floating-action-buttons/#small-variant)
+
+    - vue for문으로 이벤트 처리 예시
+
+        method에 매개변수로 data를 전달해서 활용 가능
+
+    ```javascript
+    <template>
+    	<v-list-item
+    	  v-for="place in places"
+    	  :key="place.id"
+    		:place="place"
+    		@click="test(place)"
+    	>
+    		:
+    	</v-list-item
+    </template>
+
+    <script>
+    export default {
+      name: 'PlaceCard',
+      data () {
+    		return {
+          places: [
+            { id:0, name: '경복궁' },
+            { id:1, name: '창경궁' },
+    							:
+          ],
+        }
+      },
+      methods: {
+        test(place) {
+    			console.log(place.name);
+        }
+      }
+    }
+    </script>
+
+    ```
+
+    - image 동적으로 호출하는 방법
+
+        import로 이미지를 가져오고, data에서 return 해준 후, src를 bind해서 사용
+
+    ```javascript
+    <template>
+    	<img :src="like">
+    </template>
+
+    <script>
+    import heart from '@/assets/img/heart.png'
+
+    export default {
+      name: 'PlaceCard',
+      data () {
+        return {
+          like: heart
+    				:
+    		}
+    	},
+    	:
+    </script>
+    ```
+
+
+
+# 회의록 12
+
+
+
+## 역할 분담
+
+- 찬진: serverless Framework 설치 & lambda 함수 생성, DB연동(MongoDB - Vue)
+- 륜화: 장소 검색
+- 진실: vue에서 DB 조회
+- 찬영: 모달에서 DB에 데이터 추가
+
+
+
+### 오늘 완료한 일정
+
+- DB와 django 연동
+
+
+
+### 참고 자료
+
+### python manage.py migrate 에서 decode error 났을 때
+
+sqlparser나 djongo의 버전이 낮아서 [해결링크](https://github.com/nesdis/djongo/issues/156)
+
+```
+$ pip install --upgrade sqlparse
+$ pip install --upgrade djongo
+```
+
+
+
+### vue에서 DB 조회하는 방법
+
+- data에서 vue template에서 사용할 변수들을 선언
+- axios로 DB와 통신하는 method 작성
+- created() 에서 조회하는 method 실행
+
+```
+import axios from "axios";
+
+export default {
+  name: 'PlaceCard',
+  data () {
+    return {
+      like: heart,
+      dislike: heartNo,
+      places: [],
+    }
+  },
+  methods: {
+    getPost (){
+            axios.get("http://127.0.0.1:8000/api/map", {auth: {
+                username: "admin",
+                password: "admin",
+
+            }})
+            .then(response => {
+                console.log(response.data);
+                this.places=response.data;
+            })
+            .catch(error => {
+                console.log(error)
+            });
+        },
+  },
+  created() {
+      this.getPost();
+    }
+}
+```
+
+- vue template에서 data사용할 때
+
+`{{ place.title }}` 이런식으로 중괄호 두개로 사용가능
+

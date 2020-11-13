@@ -10,8 +10,7 @@
     "api": "node server.js"
   },
   "dependencies": {
-    "@auth0/auth0-spa-js": "^1.13.1",
-    "@jeremyhamm/vue-slider": "^0.2.0",
+    "@auth0/auth0-spa-js": "^1.13.2",
     "@popperjs/core": "^2.5.4",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
@@ -24,7 +23,7 @@
     "stylus": "^0.54.8",
     "stylus-loader": "^4.2.0",
     "vue": "^2.6.12",
-    "vue-js-modal": "^2.0.0-rc.6",
+    "vue-eagle-modal": "^1.0.6",
     "vue-loader": "^15.9.5",
     "vue-router": "^3.2.0",
     "vue-sidebar-menu": "^4.7.3",
