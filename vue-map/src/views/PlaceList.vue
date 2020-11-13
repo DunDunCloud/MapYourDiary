@@ -68,7 +68,7 @@ export default {
       }
     },
     getPost (){
-      axios.get("http://127.0.0.1:8000/api/map", {auth: {
+      axios.get("http://127.0.0.1:8000/api/diary", {auth: {
           username: "admin",
           password: "admin",
       }})

@@ -26,7 +26,10 @@ from map import views
 urlpatterns = [
     # url(r'^api/public/', views.public),
     # url(r'^api/private/', views.private)
-    url(r'^api/map$', views.post_list),
+    url(r'^api/user$', views.user_list),
+    url(r'^api/diary$', views.diary_list),
     url(r'^api/map/(?P<pk>[0-9]+)$', views.post_detail),
+    url(r'^api/like$', views.post_like_input),
+    url(r'^api/like/(?P<pk>[0-9]+)$', views.post_like),
     url(r'^api/map/published$', views.post_list_published)
 ]
