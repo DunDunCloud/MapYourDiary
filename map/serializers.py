@@ -8,4 +8,7 @@ class MapSerializer(serializers.ModelSerializer):
         fields = ('id',
                   'title',
                   'description',
-                  'published')
+                  'published'
+                #   'lat',
+                #   'lng'
+                  )
