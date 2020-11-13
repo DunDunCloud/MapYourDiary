@@ -4,76 +4,101 @@ from django.http.response import JsonResponse
 from rest_framework.parsers import JSONParser 
 from rest_framework import status
  
-from map.models import PlacePost, PostLike, MapYourDiary
-from map.serializers import PlacePostSerializer, LikeSerializer, MapYourDiarySerializer
+from map.models import User, Diary, Like
+from map.serializers import UserSerializer, DiarySerializer, LikeSerializer
 from rest_framework.decorators import api_view
 
 
+# User 조회, 등록, 삭제
 @api_view(['GET', 'POST', 'DELETE'])
 def user_list(request):
+    # 모든 User 조회 (GET -> http://127.0.0.1/api/user)
     if request.method == 'GET':
-        users = MapYourDiary.objects.all()
-        
-        title = request.GET.get('title', None)
-        if title is not None:
-            users = MapYourDiary.filter(title__icontains=title)
-        
-        users_serializer = MapYourDiarySerializer(users, many=True)
-        return JsonResponse(users_serializer.data, safe=False)
+        users = User.objects.all()
+        # title = request.GET.get('title', None)
 
+        # if title is not None:
+        #     users = User.filter(title__icontains=title)
+        
+        user_serializer = UserSerializer(users, many=True)
+        return JsonResponse(user_serializer.data, safe=False)
+    
+    # User 등록 (POST -> http://127.0.0.1/api/user)
     elif request.method == 'POST':
-        users_data = JSONParser().parse(request)
-        users_serializer = MapYourDiarySerializer(data=users_data)
-        if users_serializer.is_valid():
-            users_serializer.save()
-            return JsonResponse(users_serializer.data, status=status.HTTP_201_CREATED) 
-        return JsonResponse(users_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        user_data = JSONParser().parse(request)
+        user_serializer = UserSerializer(data=user_data)
+        
+        if user_serializer.is_valid():
+            user_serializer.save()
+            return JsonResponse(user_serializer.data, status=status.HTTP_201_CREATED)
 
+        return JsonResponse(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    # 모든 User 삭제 (DELETE -> http://127.0.0.1/api/user)
     elif request.method == 'DELETE':
-        count = MapYourDiary.objects.all().delete()
-        return JsonResponse({'message': '{} MapPosts were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
+        count = User.objects.all().delete()
+        return JsonResponse({'MESSAGE!': '{} Users were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
 
+# Diary 조회, 등록, 삭제
 @api_view(['GET', 'POST', 'DELETE'])
 def diary_list(request):
+    # 모든 Diary 조회 (GET -> http://127.0.0.1/api/diary)
     if request.method == 'GET':
-        place_posts = PlacePost.objects.all()
-        
+        diary = Diary.objects.all()
         title = request.GET.get('title', None)
+
         if title is not None:
-            place_posts = PlacePost.filter(title__icontains=title)
+            diary = Diary.filter(title__icontains=title)
         
-        place_post_serializer = PlacePostSerializer(place_posts, many=True)
-        return JsonResponse(place_post_serializer.data, safe=False)
-
+        diary_serializer = DiarySerializer(diary, many=True)
+        return JsonResponse(diary_serializer.data, safe=False)
+    
+    # Diary 등록 (POST -> http://127.0.0.1/api/diary)
     elif request.method == 'POST':
-        place_posts = JSONParser().parse(request)
-        place_post_serializer = PlacePostSerializer(data=place_posts)
-        if place_post_serializer.is_valid():
-            place_post_serializer.save()
-            return JsonResponse(place_post_serializer.data, status=status.HTTP_201_CREATED) 
-        return JsonResponse(place_post_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        diary = JSONParser().parse(request)
+        diary_serializer = DiarySerializer(data=diary)
 
+        if diary_serializer.is_valid():
+            diary_serializer.save()
+            return JsonResponse(diary_serializer.data, status=status.HTTP_201_CREATED)
+
+        return JsonResponse(diary_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    # Diary 삭제 (DELETE -> http://127.0.0.1/api/diary)
     elif request.method == 'DELETE':
-        count = PlacePost.objects.all().delete()
-        return JsonResponse({'message': '{} MapPosts were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
+        count = Diary.objects.all().delete()
+        return JsonResponse({'MESSAGE!': '{} All Diaries were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
 
-@api_view(['POST'])
-def post_like_input(request):
-    if request.method == 'POST':
-        like_data = JSONParser().parse(request)
-        like_serializer = LikeSerializer(data=like_data)
+# 좋아요 누른 Diary 조회, 등록
+@api_view(['GET', 'POST'])
+def like_list(request):
+    # 좋아요 누른 Diary 조회 (GET -> http://127.0.0.1/api/like)
+    if request.method == 'GET':
+        like = Like.objects.all()
+        title = request.GET.get('title', None)
+
+        if title is not None:
+            like = Like.filter(title__icontains=title)
+        
+        like_serializer = LikeSerializer(like, many=True)
+        return JsonResponse(like_serializer.data, safe=False)
+
+    # 좋아요 누른 Diary에 등록 (POST -> http://127.0.0.1/api/like)
+    elif request.method == 'POST':
+        like = JSONParser().parse(request)
+        like_serializer = LikeSerializer(data=like)
 
         if like_serializer.is_valid():
             like_serializer.save()
             return JsonResponse(like_serializer.data, status=status.HTTP_201_CREATED) 
         return JsonResponse(like_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-# Post Like
+# 좋아요 누른 특정 Diary 조회, 등록
 @api_view(['GET', 'PUT', 'POST'])
 def post_like(request, pk):
     # find tutorial by pk (id)
     try: 
-        map = PostLike.objects.get(pk=pk) 
+        like = Like.objects.get(pk=pk) 
     except PostLike.DoesNotExist: 
         return JsonResponse({'message': 'The post does not exist'}, status=status.HTTP_404_NOT_FOUND) 
  
