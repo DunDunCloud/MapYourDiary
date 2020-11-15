@@ -20,102 +20,158 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:yeo" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:test" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bd11b6b-d3a7-444a-94b2-b31907c77643" name="Default Changelist" comment="회의록 기록">
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObservation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserverController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserverEntry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserverSPI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/index.js.flow" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/shims/es6-collections.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/shims/global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/shims/requestAnimationFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/defineConfigurable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/geometry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/getWindowOf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/isBrowser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/throttle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/FUNDING.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/ISSUE_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/stale.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/workflows/tests.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/CHANGELOG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/CODE_OF_CONDUCT.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/deploy.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/.vuepress/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/.vuepress/sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Events.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Examples.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Installation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Intro.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Other.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Properties.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Slots.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Usage.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/components/ExampleModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/components/Logo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/components/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/layouts/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/layouts/default.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/nuxt.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/pages/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/pages/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/plugins/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/plugins/vue-js-modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/Plugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/PluginCore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/Dialog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/Modal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/ModalsContainer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/Resizer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/errors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/focusTrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/numbers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/parser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/parser.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/resizeObserver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/types/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    <list default="true" id="2f2f350f-a6a6-4ac2-abb4-5ece321ea829" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/MapYourDiary.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diary/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diary/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diary/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diary/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/diary/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/MongoDBManager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/diary/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/map/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/map_your_diary/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/map_your_diary/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-map/src/components/Modal2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/map/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map_your_diary/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/map_your_diary/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/components/HelloWorld.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/components/MyModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/components/MyModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/components/PostList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/components/PostList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/components/SlideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/components/SlideBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/js/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/js/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map_your_diary/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/map_your_diary/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObservation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserverController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserverEntry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserverSPI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/index.js.flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/shims/es6-collections.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/shims/global.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/shims/requestAnimationFrame.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/defineConfigurable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/geometry.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/getWindowOf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/isBrowser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/throttle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/FUNDING.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/ISSUE_TEMPLATE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/stale.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/workflows/tests.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/CHANGELOG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/CODE_OF_CONDUCT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/LICENSE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/deploy.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/.vuepress/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/.vuepress/sidebar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Events.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Examples.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Installation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Intro.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Other.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Properties.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Slots.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Usage.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/.prettierrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/components/ExampleModal.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/components/Logo.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/components/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/layouts/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/layouts/default.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/nuxt.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/pages/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/pages/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/plugins/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/plugins/vue-js-modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/jest.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/Plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/PluginCore.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/Dialog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/Modal.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/ModalsContainer.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/Resizer.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/errors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/focusTrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/numbers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/parser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/parser.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/resizeObserver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/types.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/vue-js-modal/types/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/auth_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/assets/img/heart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/assets/img/heart_n.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/auth/authGuard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/auth/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/components/MarkerBtns.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/components/MyModal.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/components/Nav.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/components/PostList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/components/SlideBar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/components/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/components/marker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/js/googleMapsApiLoader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/js/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/plugins/vue-google-map-wrapper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/plugins/vuetify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/views/About.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/views/ExternalApi.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/views/FriendsList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/views/Home.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/views/PlaceDetailList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/views/PlaceList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/src/views/Profile.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-map/vue.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,34 +181,34 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="JupyterTrust" id="f6d1fd16-e606-4e05-966f-07270c955b3a" />
-  <component name="ProjectId" id="1jj0bewqzDXV3eqWKd4XnoNcwX3" />
+  <component name="JupyterTrust" id="601df05c-79a1-431a-85cf-86b87d73519c" />
+  <component name="ProjectId" id="1kJcmkz6wCHkLxzUtH7qKnjfv0Y" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mongo" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/mypython/recommend_movie" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\MapYourDiary\vue-map\src" />
-      <recent name="D:\MapYourDiary\vue-map\src\components" />
-      <recent name="D:\MapYourDiary\vue-map\src\assets" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration name="MapYourDiary" type="Python.DjangoServer" factoryName="Django server">
@@ -182,40 +238,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4bd11b6b-d3a7-444a-94b2-b31907c77643" name="Default Changelist" comment="" />
-      <created>1604302268611</created>
+      <changelist id="2f2f350f-a6a6-4ac2-abb4-5ece321ea829" name="Default Changelist" comment="" />
+      <created>1605422297514</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1604302268611</updated>
-      <workItem from="1604302271028" duration="4270000" />
-      <workItem from="1604328761706" duration="2954000" />
-      <workItem from="1604333552057" duration="24000" />
-      <workItem from="1604333579129" duration="1418000" />
-      <workItem from="1604362623465" duration="6058000" />
-      <workItem from="1605160683181" duration="146000" />
+      <updated>1605422297514</updated>
+      <workItem from="1605422299327" duration="7967000" />
     </task>
-    <task id="LOCAL-00001" summary="회의록 기록">
-      <created>1604305068813</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1604305068813</updated>
-    </task>
-    <task id="LOCAL-00002" summary="마커 팝업창">
-      <created>1605053754211</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1605053754211</updated>
-    </task>
-    <task id="LOCAL-00003" summary="gitignore 추가">
-      <created>1605054028745</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1605054028745</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,99 +255,29 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="yeo" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="회의록 기록" />
-    <MESSAGE value="마커 팝업창" />
-    <MESSAGE value="gitignore 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore 추가" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="267" y="19" key="#Inspections" timestamp="1604306070884">
+    <state x="237" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605428547247">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="267" y="19" key="#Inspections/0.0.1280.680@0.0.1280.680" timestamp="1604306070884" />
-    <state x="435" y="127" key="#Web_Browsers" timestamp="1605004331447">
+    <state x="237" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1605428547247" />
+    <state x="658" y="106" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605422588358">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="435" y="127" key="#Web_Browsers/0.0.1280.680@0.0.1280.680" timestamp="1605004331447" />
-    <state x="133" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605160777482">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="133" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605160777482" />
-    <state x="62" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605160556766">
+    <state x="658" y="106" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605422588358" />
+    <state x="563" y="95" key="FileChooserDialogImpl" timestamp="1605426060181">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="62" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1605160556766" />
-    <state x="401" y="141" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605006755552">
+    <state x="563" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605426060181" />
+    <state x="284" y="0" key="SettingsEditor" timestamp="1605422961804">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="401" y="141" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1605006755552" />
-    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605028876515">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="371" y="87" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605028876515" />
-    <state x="122" y="51" key="DiffContextDialog" timestamp="1605054127182">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="122" y="51" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1605054127182" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1604333573757">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604333573756" />
-    <state width="845" height="119" key="GridCell.Tab.0.bottom" timestamp="1605144270554">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="845" height="119" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605144270554" />
-    <state width="845" height="119" key="GridCell.Tab.0.center" timestamp="1605144270554">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="845" height="119" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605144270554" />
-    <state width="845" height="119" key="GridCell.Tab.0.left" timestamp="1605144270554">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="845" height="119" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605144270554" />
-    <state width="845" height="119" key="GridCell.Tab.0.right" timestamp="1605144270554">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="845" height="119" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605144270554" />
-    <state width="207" height="477" key="HiddenNamespacesPopup" timestamp="1605142348932">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="207" height="477" key="HiddenNamespacesPopup/0.0.1280.680@0.0.1280.680" timestamp="1605142348932" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1604331932542">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604331932542" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605141684072">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605141684072" />
-    <state x="455" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604382855993">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="455" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1604382855993" />
-    <state x="583" y="72" width="587" height="536" key="find.popup" timestamp="1605166555917">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="583" y="72" width="587" height="536" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1605166555917" />
+    <state x="284" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1605422961804" />
   </component>
 </project>

@@ -9,14 +9,8 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
-
-import json
-from six.moves.urllib import request
-from cryptography.x509 import load_pem_x509_certificate
-from cryptography.hazmat.backends import default_backend
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&69uxj06t1l*a^6pfj%th9po01fxne0u)r=jji9jx4&o%)yhl)'
+SECRET_KEY = 'zvg1dnlp6z_)qk9c016o5g4!#%^gi)!mald9u%l@cuiwin5gn3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,20 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'corsheaders',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'map',
-    'rest_framework',
-    'rest_framework_jwt',
+    'diary',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -84,32 +74,22 @@ WSGI_APPLICATION = 'map_your_diary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# connecting string - 일반 관리자 계정
-# admin DB dunun 계정으로 접속
-# mongodb://dundun:dundun@34.202.159.8:27017/?authSource=admin&readPreference=primary&ssl=false
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'MapYourDiary',
-        'HOST': 'mongodb://dundun:dundun@34.202.159.8:27017/admin',
+        'HOST': 'mongodb://dundun:dundun@34.202.159.8:27017/MapYourDiary',
         # 'HOST': 'ec2-34-202-159-8.compute-1.amazonaws.com',
         'PORT': '27017',
         'USER': 'dundun',
         'PASSWORD': 'dundun',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
 }
 
-
-# MapYourDiary DB에 cloud 계정으로 접속
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'djongo',
-#         'NAME': 'MapYourDiary',
-#         'USER': 'cloud',
-#         'PASSWORD': 'dundun',
-#         'HOST': 'mongodb://cloud:dundun@34.202.159.8:27017/?authSource=MapYourDiary&readPreference=primary&ssl=false
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -133,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'ko-kr'
+LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'Asia/Seoul'
 
@@ -148,52 +128,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-
-# Auth0
-
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticated',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-       'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.BasicAuthentication',
-    ),
-}
-
-AUTH0_DOMAIN = 'uc0.us.auth0.com'
-API_IDENTIFIER = 'https://django-vuejs-api'
-PUBLIC_KEY = None
-JWT_ISSUER = None
-
-if AUTH0_DOMAIN:
-    jsonurl = request.urlopen('https://' + AUTH0_DOMAIN + '/.well-known/jwks.json')
-    jwks = json.loads(jsonurl.read().decode('utf-8'))
-    cert = '-----BEGIN CERTIFICATE-----\n' + jwks['keys'][0]['x5c'][0] + '\n-----END CERTIFICATE-----'
-    certificate = load_pem_x509_certificate(cert.encode('utf-8'), default_backend())
-    PUBLIC_KEY = certificate.public_key()
-    JWT_ISSUER = 'https://' + AUTH0_DOMAIN + '/'
-
-
-def jwt_get_username_from_payload_handler(payload):
-    return 'auth0user'
-
-
-JWT_AUTH = {
-    'JWT_PAYLOAD_GET_USERNAME_HANDLER': jwt_get_username_from_payload_handler,
-    'JWT_PUBLIC_KEY': PUBLIC_KEY,
-    'JWT_ALGORITHM': 'RS256',
-    'JWT_AUDIENCE': API_IDENTIFIER,
-    'JWT_ISSUER': JWT_ISSUER,
-    'JWT_AUTH_HEADER_PREFIX': 'Bearer',
-}
-
-
-# CORS
-
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:8080',
-)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

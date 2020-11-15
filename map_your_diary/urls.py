@@ -13,20 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-# from django.contrib import admin
-# from django.urls import path
-
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-# ]
-
-from django.conf.urls import url
-from map import views
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-    # url(r'^api/public/', views.public),
-    # url(r'^api/private/', views.private)
-    url(r'^api/map$', views.post_list),
-    url(r'^api/map/(?P<pk>[0-9]+)$', views.post_detail),
-    url(r'^api/map/published$', views.post_list_published)
+    path('admin/', admin.site.urls),
+    path('', include('diary.urls')),
 ]
