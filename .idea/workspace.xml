@@ -15,107 +15,31 @@
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:feature" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:marker" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:yeo" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:jinsil" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4bd11b6b-d3a7-444a-94b2-b31907c77643" name="Default Changelist" comment="회의록 기록">
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObservation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserverController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserverEntry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/ResizeObserverSPI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/index.js.flow" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/shims/es6-collections.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/shims/global.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/shims/requestAnimationFrame.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/defineConfigurable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/geometry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/getWindowOf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/isBrowser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/resize-observer-polyfill/src/utils/throttle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/FUNDING.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/ISSUE_TEMPLATE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/stale.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.github/workflows/tests.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/CHANGELOG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/CODE_OF_CONDUCT.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/deploy.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/.vuepress/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/.vuepress/sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Events.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Examples.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Installation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Intro.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Other.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Properties.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Slots.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/docs/Usage.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/components/ExampleModal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/components/Logo.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/components/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/layouts/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/layouts/default.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/nuxt.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/pages/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/pages/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/plugins/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/examples/nuxt/plugins/vue-js-modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/Plugin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/PluginCore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/Dialog.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/Modal.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/ModalsContainer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/components/Resizer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/errors.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/focusTrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/numbers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/parser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/parser.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/resizeObserver.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/src/utils/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/vue-js-modal/types/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    <list default="true" id="27c6ddc0-6cd6-4ec1-88fe-1d9e771a5e30" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map_your_diary/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/map_your_diary/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-map/src/components/Modal2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/map/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map_your_diary/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/map_your_diary/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/components/HelloWorld.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/components/MyModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/components/MyModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/components/PostList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/components/PostList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/components/SlideBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/components/SlideBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/js/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/js/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue-map/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue-map/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,10 +50,15 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="bang" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="JupyterTrust" id="f6d1fd16-e606-4e05-966f-07270c955b3a" />
+  <component name="JupyterTrust" id="601df05c-79a1-431a-85cf-86b87d73519c" />
   <component name="ProjectId" id="1jj0bewqzDXV3eqWKd4XnoNcwX3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -139,7 +68,7 @@
     <property name="DatabaseDriversLRU" value="mongo" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/mypython/recommend_movie" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -182,7 +111,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4bd11b6b-d3a7-444a-94b2-b31907c77643" name="Default Changelist" comment="" />
+      <changelist id="27c6ddc0-6cd6-4ec1-88fe-1d9e771a5e30" name="Default Changelist" comment="" />
       <created>1604302268611</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -193,6 +122,8 @@
       <workItem from="1604333579129" duration="1418000" />
       <workItem from="1604362623465" duration="6058000" />
       <workItem from="1605160683181" duration="146000" />
+      <workItem from="1605446132385" duration="693000" />
+      <workItem from="1605449176062" duration="4499000" />
     </task>
     <task id="LOCAL-00001" summary="회의록 기록">
       <created>1604305068813</created>
@@ -232,7 +163,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="yeo" />
+                        <option value="jinsil" />
                       </list>
                     </value>
                   </entry>
@@ -260,14 +191,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="435" y="127" key="#Web_Browsers/0.0.1280.680@0.0.1280.680" timestamp="1605004331447" />
-    <state x="133" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605160777482">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="133" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605160777482" />
     <state x="62" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605160556766">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="62" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1605160556766" />
+    <state x="133" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605160777482" />
     <state x="401" y="141" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605006755552">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -280,10 +208,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="122" y="51" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1605054127182" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1604333573757">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1605450587720">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604333573756" />
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605450587720" />
     <state width="845" height="119" key="GridCell.Tab.0.bottom" timestamp="1605144270554">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
